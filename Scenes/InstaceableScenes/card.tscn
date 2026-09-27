@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dlhmvb5k3ji5p"]
+
+[ext_resource type="Texture2D" uid="uid://cycd0l2yenap2" path="res://icon.svg" id="1_u3jg4"]
+[ext_resource type="Script" uid="uid://jro1xyiqnd26" path="res://Scripts/card.gd" id="1_v8kqj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3jg4"]
+
+[node name="Card" type="Area2D" unique_id=449856282]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_v8kqj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=588001314]
+shape = SubResource("RectangleShape2D_u3jg4")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=761044634]
+modulate = Color(1, 0.90300006, 0.029999971, 1)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("1_u3jg4")
