@@ -21,6 +21,8 @@ Global="*uid://ch3kf0osmodo6"
 
 [display]
 
+window/size/viewport_width=640
+window/size/viewport_height=320
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

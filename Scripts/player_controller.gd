@@ -11,11 +11,23 @@ extends CharacterBody2D
 @export var camera : Camera2D
 
 @onready var ball_pos := $BallPosition
-@onready var meele_hitbox := $BallPosition/MeleeHitbox
+@onready var meele_hitbox := $MeleeHitbox
+@onready var char_sprite := $Icon
+@onready var anim_tree := $AnimationTree
 
 var smooth_speed : float
 var direction_to_mouse : Vector2
 var mouse_pos : Vector2
+var raw_speed : float
+var is_on_air : bool
+var inverse_pos : float
+var shooting : bool
+var meleeing : bool
+var jumping : bool
+var falling : bool
+
+func _ready() -> void:
+	inverse_pos = -(ball_pos.position.x)
 
 func _physics_process(delta: float) -> void:
 	walk(delta)
@@ -26,18 +38,26 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("melee"):
 		melee()
 	mouse_pos = get_global_mouse_position()
-	direction_to_mouse = ball_pos.global_position.direction_to(mouse_pos)
+	direction_to_mouse = self.global_position.direction_to(mouse_pos)
+	
 	if direction_to_mouse.x < 0:
-		ball_pos.position.x = -22
-		ball_pos.rotation = -180
-	else:
-		ball_pos.position.x = 22
-		ball_pos.rotation = 0
+		meele_hitbox.position.x = inverse_pos
+		meele_hitbox.rotation = deg_to_rad(-180)
+		ball_pos.position.x = inverse_pos
+		ball_pos.rotation = deg_to_rad(-180)
+		char_sprite.flip_h = true
+	if direction_to_mouse.x > 0:
+		ball_pos.position.x = absf(ball_pos.position.x)
+		meele_hitbox.rotation = deg_to_rad(0)
+		meele_hitbox.position.x = absf(ball_pos.position.x)
+		ball_pos.rotation = deg_to_rad(0)
+		char_sprite.flip_h = false
 	follow_camera(delta)
 	move_and_slide()
+	handle_animations()
 
 func walk(delta: float) -> void:
-	var raw_speed := Input.get_axis("left","right") * speed
+	raw_speed = Input.get_axis("left","right") * speed
 	smooth_speed = lerpf(smooth_speed,raw_speed, delta * 20)
 	velocity.y += gravity
 	velocity.x = smooth_speed
@@ -45,23 +65,29 @@ func walk(delta: float) -> void:
 func jump() -> void:
 	if is_on_floor():
 		velocity.y = -jump_strength
-
+		jumping = true
+		#char_sprite.play("jump")
 func shoot() -> void:
+	shooting = true
+	char_sprite.play("shoot")
+	await get_tree().create_timer(.2).timeout
 	var ball_instance := ball_scene.instantiate()
 	get_tree().current_scene.add_child(ball_instance)
 	ball_instance.global_position = ball_pos.global_position
-	
-	print(direction_to_mouse)
-	ball_instance.apply_impulse(direction_to_mouse * shoot_strength)
-	
+	var direction_to_mouse_ball = ball_pos.global_position.direction_to(mouse_pos)
+	ball_instance.apply_impulse(direction_to_mouse_ball * shoot_strength)
+	shooting = false
 	
 	
 
 func melee() -> void:
 	meele_hitbox.monitoring = true
+	meleeing = true
 	print("Iniciou carrinho")
+	char_sprite.play("head_bump")
 	await get_tree().create_timer(meele_hitbox_timer).timeout
 	print("Terminou carrinho")
+	meleeing = false
 	meele_hitbox.monitoring = false
 
 func follow_camera(delta: float) -> void:
@@ -74,3 +100,26 @@ func follow_camera(delta: float) -> void:
 
 func _on_melee_hitbox_area_entered(area: Area2D) -> void:
 	print(area)
+
+func handle_animations() -> void:
+	#print(char_sprite.is_playing())
+	if is_on_floor():
+		if is_on_air:
+			jumping = false
+			is_on_air = false
+	else:
+		is_on_air = true
+			#char_sprite.play("fall")
+			#print(char_sprite.animation)
+		#if raw_speed != 0:
+			#if char_sprite.animation != "shoot" and char_sprite.animation != "head_bump":
+				#char_sprite.play("walk")
+				#char_sprite.flip_h = true if raw_speed < 0 else false 
+		#else:
+			#if char_sprite.animation != "fall" and char_sprite.animation != "shoot" and char_sprite.animation != "head_bump":
+				#char_sprite.play("idle")
+	char_sprite.flip_h = true if raw_speed < 0 else false 
+	var idle = true if raw_speed == 0 else false
+	anim_tree.set("parameters/conditions/idle", idle)
+	anim_tree.set("parameters/conditions/walk", !idle)
+	
