@@ -1,8 +1,8 @@
 extends Area2D
 
-@export var shoot_cooldown := 1
+@export var shoot_cooldown := 3
 @export var card_scene : PackedScene
-
+@export var health := 100
 @onready var raycast := $RayCast2D
 var can_shoot := true
 var shoot_timer : float
@@ -24,6 +24,8 @@ func _process(delta: float) -> void:
 	
 	if raycast.get_collider() != null && raycast.get_collider().name == "Player":
 		shoot_card(delta)
+	if health <= 0:
+		queue_free()
 
 
 func shoot_card(delta):
@@ -42,3 +44,9 @@ func shoot_card(delta):
 			can_shoot = true
 			shoot_timer = 0
 		
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == "Ball":
+		health -= 35
+		body.queue_free()

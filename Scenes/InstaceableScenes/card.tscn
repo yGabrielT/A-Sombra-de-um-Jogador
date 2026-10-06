@@ -4,9 +4,10 @@
 [ext_resource type="Script" uid="uid://jro1xyiqnd26" path="res://Scripts/card.gd" id="1_v8kqj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3jg4"]
+size = Vector2(32, 34)
 
 [node name="Card" type="Area2D" unique_id=449856282]
-collision_layer = 8
+collision_layer = 16
 collision_mask = 4
 script = ExtResource("1_v8kqj")
 
@@ -17,3 +18,5 @@ shape = SubResource("RectangleShape2D_u3jg4")
 modulate = Color(1, 0.90300006, 0.029999971, 1)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("1_u3jg4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -9,6 +9,8 @@ extends CharacterBody2D
 @export var meele_hitbox_timer := .1
 @export var ball_scene : PackedScene
 @export var camera : Camera2D
+@export var shoot_cooldown : float = .8
+@export var health := 80
 
 @onready var ball_pos := $BallPosition
 @onready var meele_hitbox := $MeleeHitbox
@@ -25,36 +27,44 @@ var shooting : bool
 var meleeing : bool
 var jumping : bool
 var falling : bool
+var shoot_timer : float
+var can_shoot : bool = true
 
 func _ready() -> void:
 	inverse_pos = -(ball_pos.position.x)
 
 func _physics_process(delta: float) -> void:
 	walk(delta)
+	
+	move_and_slide()
+
+func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("up"):
 		jump()
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and can_shoot:
+		can_shoot = false
 		shoot()
 	if Input.is_action_just_pressed("melee"):
 		melee()
 	mouse_pos = get_global_mouse_position()
 	direction_to_mouse = self.global_position.direction_to(mouse_pos)
-	
-	if direction_to_mouse.x < 0:
-		meele_hitbox.position.x = inverse_pos
-		meele_hitbox.rotation = deg_to_rad(-180)
-		ball_pos.position.x = inverse_pos
-		ball_pos.rotation = deg_to_rad(-180)
-		char_sprite.flip_h = true
-	if direction_to_mouse.x > 0:
-		ball_pos.position.x = absf(ball_pos.position.x)
-		meele_hitbox.rotation = deg_to_rad(0)
-		meele_hitbox.position.x = absf(ball_pos.position.x)
-		ball_pos.rotation = deg_to_rad(0)
-		char_sprite.flip_h = false
-	follow_camera(delta)
-	move_and_slide()
 	handle_animations()
+	if raw_speed == 0:
+		if direction_to_mouse.x < 0:
+			meele_hitbox.position.x = inverse_pos
+			meele_hitbox.rotation = deg_to_rad(-180)
+			ball_pos.position.x = inverse_pos
+			ball_pos.rotation = deg_to_rad(-180)
+			char_sprite.flip_h = true
+		if direction_to_mouse.x > 0:
+			ball_pos.position.x = absf(ball_pos.position.x)
+			meele_hitbox.rotation = deg_to_rad(0)
+			meele_hitbox.position.x = absf(ball_pos.position.x)
+			ball_pos.rotation = deg_to_rad(0)
+			char_sprite.flip_h = false
+	follow_camera(delta)
+	handle_timers(delta)
+	handle_hud()
 
 func walk(delta: float) -> void:
 	raw_speed = Input.get_axis("left","right") * speed
@@ -99,7 +109,7 @@ func follow_camera(delta: float) -> void:
 	camera.global_position = Vector2(middle_of_cam_and_mouse_x, middle_of_cam_and_mouse_y)
 
 func _on_melee_hitbox_area_entered(area: Area2D) -> void:
-	print(area)
+	area.health -= 50
 
 func handle_animations() -> void:
 	#print(char_sprite.is_playing())
@@ -118,8 +128,20 @@ func handle_animations() -> void:
 		#else:
 			#if char_sprite.animation != "fall" and char_sprite.animation != "shoot" and char_sprite.animation != "head_bump":
 				#char_sprite.play("idle")
+	
 	char_sprite.flip_h = true if raw_speed < 0 else false 
 	var idle = true if raw_speed == 0 else false
 	anim_tree.set("parameters/conditions/idle", idle)
 	anim_tree.set("parameters/conditions/walk", !idle)
 	
+func handle_timers(delta : float):
+	#Shoot Timer
+	if !can_shoot:
+		if shoot_timer >= shoot_cooldown:
+			shoot_timer = 0.0
+			can_shoot = true
+		else:
+			shoot_timer += delta
+
+func handle_hud():
+	$Cam/PanelContainer/RichTextLabel.text = "Vida: " + str(health)
