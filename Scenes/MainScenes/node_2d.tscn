@@ -28,6 +28,10 @@ texture = ExtResource("1_bhfwh")
 position = Vector2(576.5, 631.5)
 shape = SubResource("RectangleShape2D_yf5fn")
 
+[node name="Enemy2" parent="." unique_id=158617224 instance=ExtResource("5_8wmor")]
+position = Vector2(541, 540)
+collision_mask = 9
+
 [node name="Enemy1" parent="." unique_id=979487273 instance=ExtResource("3_ey2t1")]
 position = Vector2(98, 542)
 
@@ -35,6 +39,3 @@ position = Vector2(98, 542)
 
 [node name="GameController" type="Node2D" parent="GameControllers" unique_id=920766714]
 script = ExtResource("4_a1ksf")
-
-[node name="Enemy2" parent="." unique_id=158617224 instance=ExtResource("5_8wmor")]
-position = Vector2(226, 540)

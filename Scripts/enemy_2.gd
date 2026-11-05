@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 @export var shoot_cooldown := 1
 @export var card_scene : PackedScene
@@ -20,12 +20,12 @@ func _physics_process(delta: float) -> void:
 		self.scale.x = -1
 		direction = -1
 		if can_melee:
-			self.position.x -= 2
+			velocity.x = -40
 	else:
 		direction = 1
 		self.scale.x = 1
 		if can_melee:
-			self.position.x += 2
+			velocity.x = 40
 	if raycast.get_collider() != null && raycast.get_collider().name == "Player":
 		if can_melee:
 			can_melee = false
@@ -34,6 +34,7 @@ func _physics_process(delta: float) -> void:
 	melee(delta)
 	if health <= 0:
 		queue_free()
+	move_and_slide()
 
 
 func melee(delta):
