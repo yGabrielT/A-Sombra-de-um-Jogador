@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mn4fwtjtv820"
-path="res://.godot/imported/0013.png-22975f9064ad0cd1cb5193e799052daf.ctex"
+uid="uid://dshe5202in4n"
+path="res://.godot/imported/0003.png-260977c0638f80fce0a0b3ec3be705e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/goalie/meele_attack/0013.png"
-dest_files=["res://.godot/imported/0013.png-22975f9064ad0cd1cb5193e799052daf.ctex"]
+source_file="res://Sprites/goalie/melee_attack/0003.png"
+dest_files=["res://.godot/imported/0003.png-260977c0638f80fce0a0b3ec3be705e6.ctex"]
 
 [params]
 

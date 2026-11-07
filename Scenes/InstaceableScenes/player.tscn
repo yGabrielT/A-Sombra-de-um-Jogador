@@ -114,7 +114,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
 radius = 18.0
-height = 106.0
+height = 104.0
 
 [sub_resource type="Animation" id="Animation_p4k0b"]
 length = 0.001
@@ -794,7 +794,7 @@ states/shoot/position = Vector2(388, 161)
 states/walk/node = SubResource("AnimationNodeAnimation_p4k0b")
 states/walk/position = Vector2(295, 43)
 transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_2quun"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_weq6b"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_2tyck"), "walk", "jump", SubResource("AnimationNodeStateMachineTransition_oysev"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_dwee1"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_oebg5"), "fall", "idle", SubResource("AnimationNodeStateMachineTransition_7ves1"), "idle", "shoot", SubResource("AnimationNodeStateMachineTransition_p4k0b"), "idle", "head_bump", SubResource("AnimationNodeStateMachineTransition_8y1xv"), "walk", "head_bump", SubResource("AnimationNodeStateMachineTransition_pr5wo"), "walk", "shoot", SubResource("AnimationNodeStateMachineTransition_lq1fr"), "jump", "head_bump", SubResource("AnimationNodeStateMachineTransition_wqmtj"), "fall", "head_bump", SubResource("AnimationNodeStateMachineTransition_l3skg"), "head_bump", "idle", SubResource("AnimationNodeStateMachineTransition_picqn"), "jump", "shoot", SubResource("AnimationNodeStateMachineTransition_j14rc"), "fall", "shoot", SubResource("AnimationNodeStateMachineTransition_puhh7"), "shoot", "idle", SubResource("AnimationNodeStateMachineTransition_pmv15")]
-graph_offset = Vector2(34.713715, 32)
+graph_offset = Vector2(-23.286285, 56)
 
 [node name="Player" type="CharacterBody2D" unique_id=1071459687 node_paths=PackedStringArray("camera")]
 collision_layer = 4
