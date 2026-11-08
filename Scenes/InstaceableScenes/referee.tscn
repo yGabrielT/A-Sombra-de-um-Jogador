@@ -1,27 +1,28 @@
 [gd_scene format=3 uid="uid://cw220udyo54ey"]
 
-[ext_resource type="Script" uid="uid://dpahxfyn4jq82" path="res://Scripts/enemy_1.gd" id="1_613ys"]
+[ext_resource type="Script" uid="uid://dpahxfyn4jq82" path="res://Scripts/referee.gd" id="1_613ys"]
 [ext_resource type="Texture2D" uid="uid://cycd0l2yenap2" path="res://icon.svg" id="1_mwujb"]
 [ext_resource type="PackedScene" uid="uid://dlhmvb5k3ji5p" path="res://Scenes/InstaceableScenes/card.tscn" id="2_ymk2p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mwujb"]
 size = Vector2(52, 116)
 
-[node name="Enemy1" type="Area2D" unique_id=979487273]
+[node name="Referee" type="CharacterBody2D" unique_id=732526753]
 collision_layer = 2
 collision_mask = 12
 script = ExtResource("1_613ys")
 card_scene = ExtResource("2_ymk2p")
+attack_cooldown = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=582716315]
 shape = SubResource("RectangleShape2D_mwujb")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1710925286]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1710925286]
 modulate = Color(0.98274976, 6.08854e-06, 1.540184e-06, 1)
 scale = Vector2(0.40625, 0.859375)
 texture = ExtResource("1_mwujb")
 
-[node name="Icon" type="Sprite2D" parent="Icon" unique_id=947950936]
+[node name="Icon" type="Sprite2D" parent="Sprite" unique_id=947950936]
 modulate = Color(0.98274976, 6.08854e-06, 1.540184e-06, 1)
 position = Vector2(61.538464, 5.818182)
 scale = Vector2(0.40625, 0.859375)
@@ -31,4 +32,12 @@ texture = ExtResource("1_mwujb")
 target_position = Vector2(600, 0)
 collision_mask = 5
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Area2D" type="Area2D" parent="." unique_id=232830306]
+collision_layer = 2
+collision_mask = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1008546462]
+shape = SubResource("RectangleShape2D_mwujb")
+
+[connection signal="area_entered" from="Area2D" to="." method="on_area_enemy_hit"]
+[connection signal="body_entered" from="Area2D" to="." method="on_enemy_hit"]

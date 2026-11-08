@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cycd0l2yenap2" path="res://icon.svg" id="1_bhfwh"]
 [ext_resource type="PackedScene" uid="uid://jolm6nu8s3" path="res://Scenes/InstaceableScenes/player.tscn" id="2_ey2t1"]
-[ext_resource type="PackedScene" uid="uid://cw220udyo54ey" path="res://Scenes/InstaceableScenes/enemy1.tscn" id="3_ey2t1"]
+[ext_resource type="PackedScene" uid="uid://cw220udyo54ey" path="res://Scenes/InstaceableScenes/referee.tscn" id="3_ey2t1"]
 [ext_resource type="Script" uid="uid://cjersx80p6f7d" path="res://Scripts/game_controller.gd" id="4_a1ksf"]
-[ext_resource type="PackedScene" uid="uid://bxmxnrqu6f2qy" path="res://Scenes/InstaceableScenes/enemy2.tscn" id="5_8wmor"]
+[ext_resource type="PackedScene" uid="uid://bxmxnrqu6f2qy" path="res://Scenes/InstaceableScenes/goalie.tscn" id="5_8wmor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(1179, 61)
@@ -28,11 +28,11 @@ texture = ExtResource("1_bhfwh")
 position = Vector2(576.5, 631.5)
 shape = SubResource("RectangleShape2D_yf5fn")
 
-[node name="Enemy2" parent="." unique_id=158617224 instance=ExtResource("5_8wmor")]
+[node name="Goalie" parent="." unique_id=158617224 instance=ExtResource("5_8wmor")]
 position = Vector2(541, 540)
 collision_mask = 9
 
-[node name="Enemy1" parent="." unique_id=979487273 instance=ExtResource("3_ey2t1")]
+[node name="Referee" parent="." unique_id=979487273 instance=ExtResource("3_ey2t1")]
 position = Vector2(98, 542)
 
 [node name="GameControllers" type="Node2D" parent="." unique_id=28470293]

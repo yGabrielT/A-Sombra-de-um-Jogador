@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxmxnrqu6f2qy"]
 
-[ext_resource type="Script" uid="uid://c1my5hdpa4p2s" path="res://Scripts/enemy_2.gd" id="1_jvskp"]
+[ext_resource type="Script" uid="uid://c1my5hdpa4p2s" path="res://Scripts/goalie.gd" id="1_46fa0"]
 [ext_resource type="Texture2D" uid="uid://crisv0h1u1hkg" path="res://Sprites/goalie/melee_attack/0001.png" id="3_ycmvt"]
 [ext_resource type="Texture2D" uid="uid://drxmcn2ttd516" path="res://Sprites/goalie/melee_attack/0002.png" id="4_ys5p4"]
 [ext_resource type="Texture2D" uid="uid://dshe5202in4n" path="res://Sprites/goalie/melee_attack/0003.png" id="5_l4rrg"]
@@ -217,10 +217,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4idi"]
 size = Vector2(95, 136)
 
-[node name="Enemy2" type="CharacterBody2D" unique_id=990431236]
+[node name="Goalie" type="CharacterBody2D" unique_id=990431236]
 collision_layer = 2
 collision_mask = 12
-script = ExtResource("1_jvskp")
+script = ExtResource("1_46fa0")
 speed = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=582716315]
@@ -232,7 +232,7 @@ target_position = Vector2(75, 0)
 collision_mask = 5
 hit_from_inside = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=15574101]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=15574101]
 scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"walk_cycle"
@@ -246,4 +246,5 @@ collision_mask = 12
 position = Vector2(-1.5, 3)
 shape = SubResource("RectangleShape2D_p4idi")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="on_area_enemy_hit"]
+[connection signal="body_entered" from="Area2D" to="." method="on_enemy_hit"]

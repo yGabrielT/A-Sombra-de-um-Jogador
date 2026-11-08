@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var gravity : int = 17
 @export var jump_strength : int = 600
 @export var shoot_strength : int = 10
-@export var meele_hitbox_timer := .1
+@export var meele_hitbox_timer := .01
 @export var ball_scene : PackedScene
 @export var camera : Camera2D
 @export var shoot_cooldown : float = .8
@@ -76,13 +76,13 @@ func jump() -> void:
 	if is_on_floor():
 		velocity.y = -jump_strength
 		jumping = true
-		#char_sprite.play("jump")
 func shoot() -> void:
 	shooting = true
 	char_sprite.play("shoot")
 	await get_tree().create_timer(.2).timeout
 	var ball_instance := ball_scene.instantiate()
 	get_tree().current_scene.add_child(ball_instance)
+	ball_instance.name = "Ball"
 	ball_instance.global_position = ball_pos.global_position
 	var direction_to_mouse_ball = ball_pos.global_position.direction_to(mouse_pos)
 	ball_instance.apply_impulse(direction_to_mouse_ball * shoot_strength)
@@ -93,10 +93,8 @@ func shoot() -> void:
 func melee() -> void:
 	meele_hitbox.monitoring = true
 	meleeing = true
-	print("Iniciou carrinho")
 	char_sprite.play("head_bump")
 	await get_tree().create_timer(meele_hitbox_timer).timeout
-	print("Terminou carrinho")
 	meleeing = false
 	meele_hitbox.monitoring = false
 
@@ -105,30 +103,15 @@ func follow_camera(delta: float) -> void:
 	var follow_camera_y := lerpf(camera.global_position.y, self.global_position.y, 10 * delta)
 	var middle_of_cam_and_mouse_x := lerpf(follow_camera_x, mouse_pos.x, .1)
 	var middle_of_cam_and_mouse_y := lerpf(follow_camera_y, mouse_pos.y, .01)
-#	var middle_of_cam_and_mouse := Vector2(follow_camera_x,follow_camera_y).lerp(mouse_pos, .1)
 	camera.global_position = Vector2(middle_of_cam_and_mouse_x, middle_of_cam_and_mouse_y)
 
-func _on_melee_hitbox_area_entered(area: Area2D) -> void:
-	area.health -= 50
-
 func handle_animations() -> void:
-	#print(char_sprite.is_playing())
 	if is_on_floor():
 		if is_on_air:
 			jumping = false
 			is_on_air = false
 	else:
 		is_on_air = true
-			#char_sprite.play("fall")
-			#print(char_sprite.animation)
-		#if raw_speed != 0:
-			#if char_sprite.animation != "shoot" and char_sprite.animation != "head_bump":
-				#char_sprite.play("walk")
-				#char_sprite.flip_h = true if raw_speed < 0 else false 
-		#else:
-			#if char_sprite.animation != "fall" and char_sprite.animation != "shoot" and char_sprite.animation != "head_bump":
-				#char_sprite.play("idle")
-	
 	char_sprite.flip_h = true if raw_speed < 0 else false 
 	var idle = true if raw_speed == 0 else false
 	anim_tree.set("parameters/conditions/idle", idle)
