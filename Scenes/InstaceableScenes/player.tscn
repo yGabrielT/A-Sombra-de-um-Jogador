@@ -826,6 +826,7 @@ position = Vector2(22, 0)
 collision_layer = 8
 collision_mask = 2
 monitoring = false
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeHitbox" unique_id=711429151]
 position = Vector2(39.5, 0)
@@ -838,7 +839,10 @@ advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="Cam" type="Camera2D" parent="." unique_id=1425482385]
-zoom = Vector2(1.5, 1.5)
+process_priority = 1
+process_physics_priority = 1
+zoom = Vector2(0.5, 0.5)
+limit_smoothed = true
 
 [node name="PanelContainer" type="Control" parent="Cam" unique_id=1072234420]
 layout_mode = 3

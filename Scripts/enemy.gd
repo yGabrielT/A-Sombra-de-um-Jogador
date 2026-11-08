@@ -10,7 +10,7 @@ var current_direction : int
 var initial_raycast_target_position : Vector2
 
 @onready var raycast : RayCast2D = $RayCast2D
-@onready var sprite := $Sprite
+@onready var sprite : AnimatedSprite2D = $Sprite
 
 func _ready() -> void:
 	initial_raycast_target_position = raycast.target_position
@@ -30,7 +30,7 @@ func check_direction():
 
 func on_enemy_hit(body: Node2D) -> void:
 	
-	if body.name == "Ball" or body.name == "MeleeHitbox":
+	if body.name.contains("Ball"):
 		health -= 35
 		if health <= 0:
 			self.queue_free()
