@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c8suumchccy51"]
 
 [ext_resource type="Texture2D" uid="uid://cycd0l2yenap2" path="res://icon.svg" id="1_4j1eu"]
+[ext_resource type="Texture2D" uid="uid://hmmnecq0j66n" path="res://Sprites/ball.png" id="2_a6feo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 
@@ -15,7 +16,12 @@ mass = 0.5
 shape = SubResource("CircleShape2D_g4v7s")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=524874251]
+visible = false
 position = Vector2(0, 1.9073486e-06)
 scale = Vector2(20.022678, 20.000004)
 mesh = SubResource("SphereMesh_g4v7s")
 texture = ExtResource("1_4j1eu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2133291679]
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("2_a6feo")

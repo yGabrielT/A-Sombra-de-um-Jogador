@@ -86,6 +86,7 @@ func shoot() -> void:
 	ball_instance.global_position = ball_pos.global_position
 	var direction_to_mouse_ball = ball_pos.global_position.direction_to(mouse_pos)
 	ball_instance.apply_impulse(direction_to_mouse_ball * shoot_strength)
+	ball_instance.apply_torque_impulse(shoot_strength)
 	shooting = false
 	
 	

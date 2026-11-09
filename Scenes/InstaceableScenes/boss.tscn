@@ -445,7 +445,6 @@ size = Vector2(95, 136)
 
 [node name="Boss" type="CharacterBody2D" unique_id=990431236]
 collision_layer = 2
-collision_mask = 9
 script = ExtResource("1_yr0d5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=582716315]
@@ -461,7 +460,7 @@ hit_from_inside = true
 scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_uy2pu")
 animation = &"idle"
-frame_progress = 0.5632032
+frame_progress = 0.72790533
 
 [node name="Area2D" type="Area2D" parent="." unique_id=173414443]
 collision_layer = 0
