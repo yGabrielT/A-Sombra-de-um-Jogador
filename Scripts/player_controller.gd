@@ -29,6 +29,7 @@ var jumping : bool
 var falling : bool
 var shoot_timer : float
 var can_shoot : bool = true
+var game_paused : bool = false
 
 func _ready() -> void:
 	inverse_pos = -(ball_pos.position.x)
@@ -37,6 +38,8 @@ func _physics_process(delta: float) -> void:
 	walk(delta)
 	
 	move_and_slide()
+	if health <= 0:
+		get_tree().change_scene_to_file("res://Scenes/MainScenes/game_over.tscn")
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("up"):

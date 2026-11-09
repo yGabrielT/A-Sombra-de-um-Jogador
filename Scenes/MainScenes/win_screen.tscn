@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cenesmsxq1ksb"]
+
+[ext_resource type="Script" uid="uid://cuyawyyrwp2yo" path="res://Scripts/main_menu_controller.gd" id="1_fixk8"]
+
+[node name="WinScreen" type="Control" unique_id=2053210910]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fixk8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=330558297]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_right = 75
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1676934976]
+layout_mode = 2
+theme_override_constants/separation = 48
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=781484144]
+layout_mode = 2
+text = "Você ganhou!"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=225340493]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1473062440]
+layout_mode = 2
+text = "Tentar novamente"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
