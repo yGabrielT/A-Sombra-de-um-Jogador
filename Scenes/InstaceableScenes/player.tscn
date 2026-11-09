@@ -845,6 +845,7 @@ zoom = Vector2(0.5, 0.5)
 limit_smoothed = true
 
 [node name="PanelContainer" type="Control" parent="Cam" unique_id=1072234420]
+z_index = 1
 layout_mode = 3
 anchors_preset = 0
 offset_left = -320.0

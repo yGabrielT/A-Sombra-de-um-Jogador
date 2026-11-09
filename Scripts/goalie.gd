@@ -1,7 +1,6 @@
 class_name Goalie
 extends Enemy
 
-@export var shoot_cooldown := 1
 @export var speed := 60
 
 var can_melee := true
@@ -29,7 +28,7 @@ func _physics_process(delta: float) -> void:
 			can_melee = false
 			print("atacou na mão")
 			Global.game_controller.player.health -= 10
-	melee(delta)
+	handle_melee_cooldown(delta)
 	if health <= 0:
 		queue_free()
 	move_and_slide()
@@ -43,9 +42,9 @@ func handle_movement():
 	else:
 		jump_to_attack()
 	
-func melee(delta):
+func handle_melee_cooldown(delta):
 	if !can_melee:
-		if melee_timer < shoot_cooldown:
+		if melee_timer < attack_cooldown:
 			melee_timer += delta
 		else:
 			can_melee = true

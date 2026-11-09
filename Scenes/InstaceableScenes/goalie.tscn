@@ -219,7 +219,7 @@ size = Vector2(95, 136)
 
 [node name="Goalie" type="CharacterBody2D" unique_id=990431236]
 collision_layer = 2
-collision_mask = 12
+collision_mask = 9
 script = ExtResource("1_46fa0")
 speed = 100
 
