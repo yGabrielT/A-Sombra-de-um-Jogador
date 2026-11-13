@@ -106,7 +106,6 @@
 [ext_resource type="Texture2D" uid="uid://bwpuaix7tnm8n" path="res://Sprites/footballchar/walk/0018.png" id="109_7nmnp"]
 [ext_resource type="Texture2D" uid="uid://curtdir303igw" path="res://Sprites/footballchar/walk/0019.png" id="110_36ln8"]
 [ext_resource type="Texture2D" uid="uid://rib472rfh12j" path="res://Sprites/footballchar/walk/0020.png" id="111_6ftl3"]
-[ext_resource type="Script" uid="uid://l3mii16qoepf" path="res://Scripts/pause_menu.gd" id="112_p4k0b"]
 [ext_resource type="Texture2D" uid="uid://xwhc1h2iibng" path="res://Sprites/footballchar/walk/0021.png" id="112_rwywc"]
 [ext_resource type="Texture2D" uid="uid://cudipytqbp3l2" path="res://Sprites/footballchar/walk/0022.png" id="113_2itni"]
 [ext_resource type="Texture2D" uid="uid://puy66tglbne2" path="res://Sprites/footballchar/walk/0023.png" id="114_iryjx"]
@@ -115,7 +114,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
 radius = 18.0
-height = 104.0
+height = 100.0
 
 [sub_resource type="Animation" id="Animation_p4k0b"]
 length = 0.001
@@ -797,18 +796,6 @@ states/walk/position = Vector2(295, 43)
 transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_2quun"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_weq6b"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_2tyck"), "walk", "jump", SubResource("AnimationNodeStateMachineTransition_oysev"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_dwee1"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_oebg5"), "fall", "idle", SubResource("AnimationNodeStateMachineTransition_7ves1"), "idle", "shoot", SubResource("AnimationNodeStateMachineTransition_p4k0b"), "idle", "head_bump", SubResource("AnimationNodeStateMachineTransition_8y1xv"), "walk", "head_bump", SubResource("AnimationNodeStateMachineTransition_pr5wo"), "walk", "shoot", SubResource("AnimationNodeStateMachineTransition_lq1fr"), "jump", "head_bump", SubResource("AnimationNodeStateMachineTransition_wqmtj"), "fall", "head_bump", SubResource("AnimationNodeStateMachineTransition_l3skg"), "head_bump", "idle", SubResource("AnimationNodeStateMachineTransition_picqn"), "jump", "shoot", SubResource("AnimationNodeStateMachineTransition_j14rc"), "fall", "shoot", SubResource("AnimationNodeStateMachineTransition_puhh7"), "shoot", "idle", SubResource("AnimationNodeStateMachineTransition_pmv15")]
 graph_offset = Vector2(-23.286285, 56)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwee1"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
-bg_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
-
 [node name="Player" type="CharacterBody2D" unique_id=1071459687 node_paths=PackedStringArray("camera")]
 collision_layer = 4
 collision_mask = 17
@@ -816,7 +803,7 @@ script = ExtResource("1_xqo16")
 speed = 400
 shoot_strength = 700
 ball_scene = ExtResource("2_bs8co")
-camera = NodePath("Cam")
+camera = NodePath("")
 health = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1012738748]
@@ -851,79 +838,3 @@ root_node = NodePath("../Icon")
 tree_root = SubResource("AnimationNodeStateMachine_weq6b")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-
-[node name="Cam" type="Camera2D" parent="." unique_id=1425482385]
-process_priority = 1
-process_physics_priority = 1
-zoom = Vector2(0.5, 0.5)
-limit_smoothed = true
-
-[node name="PanelContainer" type="Control" parent="Cam" unique_id=1072234420]
-z_index = 1
-layout_mode = 3
-anchors_preset = 0
-offset_left = -384.0
-offset_top = -216.0
-offset_right = 384.0
-offset_bottom = 216.0
-metadata/_edit_use_anchors_ = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Cam/PanelContainer" unique_id=621566342]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -39.0
-offset_right = 146.0
-offset_bottom = 1.0
-grow_vertical = 0
-size_flags_horizontal = 0
-theme_override_font_sizes/normal_font_size = 28
-text = "Vida: 100"
-
-[node name="PauseMenu" type="PanelContainer" parent="Cam/PanelContainer" unique_id=85915823]
-process_mode = 3
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("112_p4k0b")
-
-[node name="MarginContainer" type="MarginContainer" parent="Cam/PanelContainer/PauseMenu" unique_id=1991516338]
-layout_mode = 2
-theme_override_constants/margin_left = 250
-theme_override_constants/margin_top = 100
-theme_override_constants/margin_right = 250
-theme_override_constants/margin_bottom = 100
-
-[node name="PanelContainer" type="PanelContainer" parent="Cam/PanelContainer/PauseMenu/MarginContainer" unique_id=413284085]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_dwee1")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Cam/PanelContainer/PauseMenu/MarginContainer/PanelContainer" unique_id=446755052]
-layout_mode = 2
-theme_override_constants/separation = 89
-
-[node name="Label" type="Label" parent="Cam/PanelContainer/PauseMenu/MarginContainer/PanelContainer/VBoxContainer" unique_id=606928428]
-layout_mode = 2
-theme_override_font_sizes/font_size = 31
-text = "Pausado"
-horizontal_alignment = 1
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="Cam/PanelContainer/PauseMenu/MarginContainer/PanelContainer" unique_id=432181047]
-layout_mode = 2
-alignment = 1
-
-[node name="Button" type="Button" parent="Cam/PanelContainer/PauseMenu/MarginContainer/PanelContainer/VBoxContainer2" unique_id=737336475]
-layout_mode = 2
-text = "Voltar ao jogo"
-
-[node name="Button2" type="Button" parent="Cam/PanelContainer/PauseMenu/MarginContainer/PanelContainer/VBoxContainer2" unique_id=619429270]
-layout_mode = 2
-text = "Sair do jogo"
-
-[connection signal="pressed" from="Cam/PanelContainer/PauseMenu/MarginContainer/PanelContainer/VBoxContainer2/Button" to="Cam/PanelContainer/PauseMenu" method="_on_button_pressed"]
-[connection signal="pressed" from="Cam/PanelContainer/PauseMenu/MarginContainer/PanelContainer/VBoxContainer2/Button2" to="Cam/PanelContainer/PauseMenu" method="_on_button_2_pressed"]

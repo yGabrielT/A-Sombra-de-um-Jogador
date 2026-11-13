@@ -36,10 +36,10 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	walk(delta)
-	
 	move_and_slide()
 	if health <= 0:
 		get_tree().change_scene_to_file("res://Scenes/MainScenes/game_over.tscn")
+	follow_camera(delta)
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("up"):
@@ -65,10 +65,8 @@ func _process(delta: float) -> void:
 			meele_hitbox.position.x = absf(ball_pos.position.x)
 			ball_pos.rotation = deg_to_rad(0)
 			char_sprite.flip_h = false
-	follow_camera(delta)
+	
 	handle_timers(delta)
-	handle_hud()
-
 func walk(delta: float) -> void:
 	raw_speed = Input.get_axis("left","right") * speed
 	smooth_speed = lerpf(smooth_speed,raw_speed, delta * 20)
@@ -103,8 +101,10 @@ func melee() -> void:
 	meele_hitbox.monitoring = false
 
 func follow_camera(delta: float) -> void:
-	var follow_camera_x := lerpf(camera.global_position.x, self.global_position.x, 100 * delta)
-	var follow_camera_y := lerpf(camera.global_position.y, self.global_position.y, 10 * delta)
+	#var follow_camera_x := lerpf(camera.global_position.x, self.global_position.x, 100 * delta)
+	#var follow_camera_y := lerpf(camera.global_position.y, self.global_position.y, 10 * delta)
+	var follow_camera_x := self.global_position.x
+	var follow_camera_y := self.global_position.y - 20
 	var middle_of_cam_and_mouse_x := lerpf(follow_camera_x, mouse_pos.x, .1)
 	var middle_of_cam_and_mouse_y := lerpf(follow_camera_y, mouse_pos.y, .01)
 	camera.global_position = Vector2(middle_of_cam_and_mouse_x, middle_of_cam_and_mouse_y)
@@ -129,6 +129,3 @@ func handle_timers(delta : float):
 			can_shoot = true
 		else:
 			shoot_timer += delta
-
-func handle_hud():
-	$Cam/PanelContainer/RichTextLabel.text = "Vida: " + str(health)

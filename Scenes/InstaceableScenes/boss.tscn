@@ -446,13 +446,14 @@ size = Vector2(95, 136)
 [node name="Boss" type="CharacterBody2D" unique_id=990431236]
 collision_layer = 2
 script = ExtResource("1_yr0d5")
+health = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=582716315]
 position = Vector2(-1.5, -4)
 shape = SubResource("RectangleShape2D_mwujb")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=156713887]
-target_position = Vector2(200, 0)
+target_position = Vector2(400, 0)
 collision_mask = 5
 hit_from_inside = true
 
@@ -472,6 +473,7 @@ shape = SubResource("RectangleShape2D_p4idi")
 
 [node name="Grounds" type="Node2D" parent="." unique_id=1169640861]
 z_index = -1
+scale = Vector2(1.901, 1)
 
 [node name="ground_1" type="Node2D" parent="Grounds" unique_id=2095671584]
 position = Vector2(0, 40)
