@@ -34,6 +34,7 @@ func on_enemy_hit(body: Node2D) -> void:
 		health -= 35
 		if health <= 0:
 			self.queue_free()
+			Global.game_controller.enemys_killed += 1
 		body.queue_free()
 
 func on_area_enemy_hit(area: Area2D) -> void:
@@ -42,3 +43,4 @@ func on_area_enemy_hit(area: Area2D) -> void:
 		health -= 10
 		if health <= 0:
 			self.queue_free()
+			Global.game_controller.enemys_killed += 1

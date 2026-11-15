@@ -637,5 +637,8 @@ texture = ExtResource("106_elui5")
 position = Vector2(196, 41)
 polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
 
+[node name="ScreenNotifier" type="VisibleOnScreenNotifier2D" parent="." unique_id=531332845]
+rect = Rect2(-52, -72, 104, 144)
+
 [connection signal="area_entered" from="Area2D" to="." method="on_area_enemy_hit"]
 [connection signal="body_entered" from="Area2D" to="." method="on_enemy_hit"]

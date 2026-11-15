@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://3rsjavluokdh"]
 
 [ext_resource type="Script" uid="uid://cuyawyyrwp2yo" path="res://Scripts/main_menu_controller.gd" id="1_cr60d"]
+[ext_resource type="Texture2D" uid="uid://n3he6vfidm51" path="res://Sprites/scenesArts/footballGamedefeatArt.png" id="2_4olxp"]
 
 [node name="GameOver" type="Control" unique_id=2053210910]
 layout_mode = 3
@@ -11,6 +12,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cr60d")
 
+[node name="FootballGameMainArt" type="Sprite2D" parent="." unique_id=944745640]
+position = Vector2(191.65503, 108.00001)
+scale = Vector2(1.5026956, 1.6875001)
+texture = ExtResource("2_4olxp")
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=330558297]
 layout_mode = 1
 anchors_preset = 15
@@ -18,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 75
+theme_override_constants/margin_left = 200
 theme_override_constants/margin_right = 75
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1676934976]
@@ -28,6 +34,10 @@ alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=781484144]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.8595056, 0, 0.14829269, 1)
+theme_override_colors/font_outline_color = Color(0.35879773, 0, 0.0056015532, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 40
 text = "GAME OVER"
 horizontal_alignment = 1
 

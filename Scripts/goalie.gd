@@ -5,7 +5,8 @@ extends Enemy
 
 var can_melee := true
 var melee_timer : float
-var can_jump = true
+var can_jump := true
+@onready var screen_notifier := $ScreenNotifier
 
 
 func _ready() -> void:
@@ -36,11 +37,14 @@ func _physics_process(delta: float) -> void:
 
 
 func handle_movement():
-	if can_melee:
-		sprite.play("walk_cycle")
-		velocity.x = -speed if current_direction == Direction.LEFT else speed
+	if screen_notifier.is_on_screen():
+		if can_melee:
+			sprite.play("walk_cycle")
+			velocity.x = -speed if current_direction == Direction.LEFT else speed
+		else:
+			jump_to_attack()
 	else:
-		jump_to_attack()
+		velocity.x = 0
 	
 func handle_melee_cooldown(delta):
 	if !can_melee:

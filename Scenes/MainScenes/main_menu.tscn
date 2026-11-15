@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bgrqnfumluvp1"]
 
 [ext_resource type="Script" uid="uid://cuyawyyrwp2yo" path="res://Scripts/main_menu_controller.gd" id="1_pm3d6"]
+[ext_resource type="Texture2D" uid="uid://bq5owits2pk75" path="res://Sprites/scenesArts/footballGameMainArt.png" id="2_5aow8"]
 
 [node name="MainMenu" type="Control" unique_id=2053210910]
 layout_mode = 3
@@ -11,6 +12,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pm3d6")
 
+[node name="FootballGameMainArt" type="Sprite2D" parent="." unique_id=1916996488]
+position = Vector2(191.65503, 108.00001)
+scale = Vector2(1.5026956, 1.6875001)
+texture = ExtResource("2_5aow8")
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=330558297]
 layout_mode = 1
 anchors_preset = 15
@@ -18,8 +24,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 75
-theme_override_constants/margin_right = 75
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_right = 150
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1676934976]
 layout_mode = 2
@@ -28,8 +34,13 @@ alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=781484144]
 layout_mode = 2
-text = "As aventuras de um jogador"
+theme_override_colors/font_color = Color(0, 0.8273903, 0.48141158, 1)
+theme_override_colors/font_outline_color = Color(0.042226575, 0.10428528, 6.016344e-09, 1)
+theme_override_constants/outline_size = 9
+text = "As Aventuras de um
+Jogador"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=225340493]
 layout_mode = 2

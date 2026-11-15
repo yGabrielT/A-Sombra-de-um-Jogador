@@ -10,6 +10,7 @@ var grounds_nodes : Array[Node2D]
 var is_on_smash_animation = false
 
 @onready var grounds := $Grounds
+@onready var screen_notifier := $ScreenNotifier
 
 func _ready() -> void:
 	super._ready()
@@ -42,11 +43,14 @@ func _physics_process(delta: float) -> void:
 
 
 func handle_movement():
-	if can_melee:
-		sprite.play("walk_cycle")
-		velocity.x = -speed if current_direction == Direction.LEFT else speed
+	if screen_notifier.is_on_screen():
+		if can_melee:
+			sprite.play("walk_cycle")
+			velocity.x = -speed if current_direction == Direction.LEFT else speed
+		else:
+			smash()
 	else:
-		smash()
+		velocity.x = 0
 	
 func handle_melee_cooldown(delta):
 	if !can_melee:

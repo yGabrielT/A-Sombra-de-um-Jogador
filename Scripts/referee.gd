@@ -19,6 +19,8 @@ func _process(delta: float) -> void:
 	if health <= 0:
 		queue_free()
 
+func _physics_process(delta: float) -> void:
+	velocity.y += 2.5
 
 func shoot_card(delta):
 	if can_shoot:

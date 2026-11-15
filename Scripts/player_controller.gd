@@ -14,6 +14,7 @@ extends CharacterBody2D
 
 @onready var ball_pos := $BallPosition
 @onready var meele_hitbox := $MeleeHitbox
+@onready var meele_hitbox_col := $MeleeHitbox/col
 @onready var char_sprite := $Icon
 @onready var anim_tree := $AnimationTree
 
@@ -47,7 +48,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("shoot") and can_shoot:
 		can_shoot = false
 		shoot()
-	if Input.is_action_just_pressed("melee"):
+	if Input.is_action_just_pressed("melee") and !meleeing:
 		melee()
 	mouse_pos = get_global_mouse_position()
 	direction_to_mouse = self.global_position.direction_to(mouse_pos)
@@ -93,12 +94,12 @@ func shoot() -> void:
 	
 
 func melee() -> void:
-	meele_hitbox.monitoring = true
+	meele_hitbox_col.disabled = false
 	meleeing = true
 	char_sprite.play("head_bump")
 	await get_tree().create_timer(meele_hitbox_timer).timeout
 	meleeing = false
-	meele_hitbox.monitoring = false
+	meele_hitbox_col.disabled = true
 
 func follow_camera(delta: float) -> void:
 	#var follow_camera_x := lerpf(camera.global_position.x, self.global_position.x, 100 * delta)

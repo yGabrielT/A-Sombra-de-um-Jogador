@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cenesmsxq1ksb"]
 
-[ext_resource type="Script" uid="uid://cuyawyyrwp2yo" path="res://Scripts/main_menu_controller.gd" id="1_fixk8"]
+[ext_resource type="Script" uid="uid://cyos1gk0bp0ny" path="res://Scripts/win_screen.gd" id="1_st02r"]
+[ext_resource type="Texture2D" uid="uid://c1bg3fu4tjij6" path="res://Sprites/scenesArts/footballGameWinArt.png" id="2_st02r"]
 
 [node name="WinScreen" type="Control" unique_id=2053210910]
 layout_mode = 3
@@ -9,7 +10,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_fixk8")
+script = ExtResource("1_st02r")
+
+[node name="FootballGameMainArt" type="Sprite2D" parent="." unique_id=1112406408]
+position = Vector2(191.65503, 108.00001)
+scale = Vector2(1.5026956, 1.6875001)
+texture = ExtResource("2_st02r")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=330558297]
 layout_mode = 1
@@ -19,6 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 48
 theme_override_constants/margin_right = 75
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1676934976]
@@ -28,6 +35,10 @@ alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=781484144]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.71724504, 0.4038452, 1)
+theme_override_colors/font_outline_color = Color(4.4520945e-07, 0.25822303, 0.07614956, 1)
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 32
 text = "Você ganhou!"
 horizontal_alignment = 1
 
@@ -37,6 +48,6 @@ alignment = 1
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1473062440]
 layout_mode = 2
-text = "Tentar novamente"
+text = "Ir para o Menu"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

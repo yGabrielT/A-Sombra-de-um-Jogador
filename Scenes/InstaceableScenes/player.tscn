@@ -2,115 +2,114 @@
 
 [ext_resource type="Script" uid="uid://bokqyvoop42is" path="res://Scripts/player_controller.gd" id="1_xqo16"]
 [ext_resource type="PackedScene" uid="uid://c8suumchccy51" path="res://Scenes/InstaceableScenes/ball.tscn" id="2_bs8co"]
-[ext_resource type="Texture2D" uid="uid://cxqked65r3cnb" path="res://Sprites/footballchar/fall/0001.png" id="3_qvoyt"]
-[ext_resource type="Texture2D" uid="uid://ocib1k1etyya" path="res://Sprites/footballchar/fall/0002.png" id="4_krddw"]
-[ext_resource type="Texture2D" uid="uid://dnkctj317siu6" path="res://Sprites/footballchar/fall/0003.png" id="5_lvkrb"]
-[ext_resource type="Texture2D" uid="uid://dlsfwq28rovol" path="res://Sprites/footballchar/fall/0004.png" id="6_3uuu7"]
-[ext_resource type="Texture2D" uid="uid://ctfkmtvxhqr42" path="res://Sprites/footballchar/fall/0005.png" id="7_s1fhs"]
-[ext_resource type="Texture2D" uid="uid://dd51qwoyljn2f" path="res://Sprites/footballchar/fall/0006.png" id="8_xdean"]
-[ext_resource type="Texture2D" uid="uid://cf5dlh6d65sc6" path="res://Sprites/footballchar/fall/0007.png" id="9_hdtaj"]
-[ext_resource type="Texture2D" uid="uid://b4gb5r7biwrip" path="res://Sprites/footballchar/fall/0008.png" id="10_ft7xc"]
-[ext_resource type="Texture2D" uid="uid://c357pf55wqoao" path="res://Sprites/footballchar/head_bump/0001.png" id="11_tpo0c"]
-[ext_resource type="Texture2D" uid="uid://d3pqlh0odeekd" path="res://Sprites/footballchar/head_bump/0002.png" id="12_olhre"]
-[ext_resource type="Texture2D" uid="uid://c6tk5goab3xck" path="res://Sprites/footballchar/head_bump/0003.png" id="13_8kned"]
-[ext_resource type="Texture2D" uid="uid://3xhgf32ds2wa" path="res://Sprites/footballchar/head_bump/0004.png" id="14_doolw"]
-[ext_resource type="Texture2D" uid="uid://wokdioi7tgdu" path="res://Sprites/footballchar/head_bump/0005.png" id="15_iggy0"]
-[ext_resource type="Texture2D" uid="uid://by71qehij2d58" path="res://Sprites/footballchar/head_bump/0006.png" id="16_67qxe"]
-[ext_resource type="Texture2D" uid="uid://caejd7kafq5u4" path="res://Sprites/footballchar/head_bump/0007.png" id="17_h8xcu"]
-[ext_resource type="Texture2D" uid="uid://bx8f0miuoh4sa" path="res://Sprites/footballchar/head_bump/0008.png" id="18_cf40s"]
-[ext_resource type="Texture2D" uid="uid://j8x00mp7wiue" path="res://Sprites/footballchar/head_bump/0009.png" id="19_hu3nd"]
-[ext_resource type="Texture2D" uid="uid://bs5b2y6rbutr1" path="res://Sprites/footballchar/head_bump/0010.png" id="20_q5d1a"]
-[ext_resource type="Texture2D" uid="uid://bg684p3rb6iw8" path="res://Sprites/footballchar/head_bump/0011.png" id="21_itusb"]
-[ext_resource type="Texture2D" uid="uid://cx88gawgr3j4y" path="res://Sprites/footballchar/head_bump/0012.png" id="22_7ixdd"]
-[ext_resource type="Texture2D" uid="uid://cblxr4rqsemu7" path="res://Sprites/footballchar/head_bump/0013.png" id="23_2aoyt"]
-[ext_resource type="Texture2D" uid="uid://i4unfa164qk0" path="res://Sprites/footballchar/head_bump/0014.png" id="24_e1d7x"]
-[ext_resource type="Texture2D" uid="uid://cogxykk6mbts" path="res://Sprites/footballchar/head_bump/0015.png" id="25_uagc2"]
-[ext_resource type="Texture2D" uid="uid://bqd5mjpl7q2g5" path="res://Sprites/footballchar/idle/0001.png" id="27_2swkj"]
-[ext_resource type="Texture2D" uid="uid://cuw4yfau2hhcg" path="res://Sprites/footballchar/idle/0002.png" id="28_bhd7a"]
-[ext_resource type="Texture2D" uid="uid://5qc477j0ic24" path="res://Sprites/footballchar/idle/0003.png" id="29_mqobo"]
-[ext_resource type="Texture2D" uid="uid://b7atgithwmprc" path="res://Sprites/footballchar/idle/0004.png" id="30_ihljs"]
-[ext_resource type="Texture2D" uid="uid://bmdxot5n1sxf0" path="res://Sprites/footballchar/idle/0005.png" id="31_f8sq6"]
-[ext_resource type="Texture2D" uid="uid://d1jvm2h7fvp8e" path="res://Sprites/footballchar/idle/0006.png" id="32_041jo"]
-[ext_resource type="Texture2D" uid="uid://1y4edjwr1lte" path="res://Sprites/footballchar/idle/0007.png" id="33_flekd"]
-[ext_resource type="Texture2D" uid="uid://cj0a1alyoo5f" path="res://Sprites/footballchar/idle/0008.png" id="34_omlme"]
-[ext_resource type="Texture2D" uid="uid://b5hg7x6egahhb" path="res://Sprites/footballchar/idle/0009.png" id="35_poc1d"]
-[ext_resource type="Texture2D" uid="uid://ifnnvjnr7027" path="res://Sprites/footballchar/idle/0010.png" id="36_e5qda"]
-[ext_resource type="Texture2D" uid="uid://b3w6et10jm7xg" path="res://Sprites/footballchar/idle/0011.png" id="37_7nxh3"]
-[ext_resource type="Texture2D" uid="uid://c430ur7mvsls1" path="res://Sprites/footballchar/idle/0012.png" id="38_dd5tl"]
-[ext_resource type="Texture2D" uid="uid://bi6mbiukbp5pt" path="res://Sprites/footballchar/idle/0013.png" id="39_ury7l"]
-[ext_resource type="Texture2D" uid="uid://dx4h6t5aw8v5y" path="res://Sprites/footballchar/idle/0014.png" id="40_ks7en"]
-[ext_resource type="Texture2D" uid="uid://fd3crnkxbr0e" path="res://Sprites/footballchar/idle/0015.png" id="41_100c0"]
-[ext_resource type="Texture2D" uid="uid://y2glwvmltenp" path="res://Sprites/footballchar/idle/0016.png" id="42_xgbma"]
-[ext_resource type="Texture2D" uid="uid://b1pyunvyj24lf" path="res://Sprites/footballchar/idle/0017.png" id="43_bhest"]
-[ext_resource type="Texture2D" uid="uid://ypsw8v1wmi1v" path="res://Sprites/footballchar/idle/0018.png" id="44_srscj"]
-[ext_resource type="Texture2D" uid="uid://dtxcy3ht5e4mt" path="res://Sprites/footballchar/idle/0019.png" id="45_mfng2"]
-[ext_resource type="Texture2D" uid="uid://6edrxm8ssfvu" path="res://Sprites/footballchar/idle/0020.png" id="46_ltpl0"]
-[ext_resource type="Texture2D" uid="uid://wbuxj7d18x08" path="res://Sprites/footballchar/idle/0021.png" id="47_yexrr"]
-[ext_resource type="Texture2D" uid="uid://dk4r2dfqm2ouk" path="res://Sprites/footballchar/idle/0022.png" id="48_2fmpp"]
-[ext_resource type="Texture2D" uid="uid://dr702a4jw6ubq" path="res://Sprites/footballchar/idle/0023.png" id="49_v1120"]
-[ext_resource type="Texture2D" uid="uid://dwbjskwaqwuj4" path="res://Sprites/footballchar/idle/0024.png" id="50_af72f"]
-[ext_resource type="Texture2D" uid="uid://mnijwe7rts0j" path="res://Sprites/footballchar/idle/0025.png" id="51_624bp"]
-[ext_resource type="Texture2D" uid="uid://dsux45w3y7nfw" path="res://Sprites/footballchar/idle/0026.png" id="52_5hi6g"]
-[ext_resource type="Texture2D" uid="uid://cl3v22evx3y7o" path="res://Sprites/footballchar/idle/0027.png" id="53_16cjr"]
-[ext_resource type="Texture2D" uid="uid://cbpallkf2riog" path="res://Sprites/footballchar/idle/0028.png" id="54_nggng"]
-[ext_resource type="Texture2D" uid="uid://dblbikygwc0rs" path="res://Sprites/footballchar/idle/0029.png" id="55_vmlka"]
-[ext_resource type="Texture2D" uid="uid://ng7hwbtsf80q" path="res://Sprites/footballchar/idle/0030.png" id="56_wk8k5"]
-[ext_resource type="Texture2D" uid="uid://bo76gooivudqs" path="res://Sprites/footballchar/idle/0031.png" id="57_adxqy"]
-[ext_resource type="Texture2D" uid="uid://djphnrehgrro5" path="res://Sprites/footballchar/idle/0032.png" id="58_0eol0"]
-[ext_resource type="Texture2D" uid="uid://bfht68uiqkwc8" path="res://Sprites/footballchar/jump/0000.png" id="59_poc1d"]
-[ext_resource type="Texture2D" uid="uid://t8ge4rm4qtpe" path="res://Sprites/footballchar/jump/0001.png" id="60_e5qda"]
-[ext_resource type="Texture2D" uid="uid://cbqlq6id2uaou" path="res://Sprites/footballchar/jump/0002.png" id="61_7nxh3"]
-[ext_resource type="Texture2D" uid="uid://bnb03dxs3c5ko" path="res://Sprites/footballchar/jump/0003.png" id="62_dd5tl"]
-[ext_resource type="Texture2D" uid="uid://dnsaiqngpimwh" path="res://Sprites/footballchar/jump/0004.png" id="63_ury7l"]
-[ext_resource type="Texture2D" uid="uid://brgyg1ixwc2c2" path="res://Sprites/footballchar/jump/0005.png" id="64_ks7en"]
-[ext_resource type="Texture2D" uid="uid://cinoi6wqpd3jc" path="res://Sprites/footballchar/jump/0006.png" id="65_100c0"]
-[ext_resource type="Texture2D" uid="uid://xwtb2ewn654n" path="res://Sprites/footballchar/jump/0007.png" id="66_xgbma"]
-[ext_resource type="Texture2D" uid="uid://bpolclniso1df" path="res://Sprites/footballchar/jump/0008.png" id="67_bhest"]
-[ext_resource type="Texture2D" uid="uid://d1tiilla1uesb" path="res://Sprites/footballchar/shoot/0001.png" id="69_u5mmc"]
-[ext_resource type="Texture2D" uid="uid://di0hmeglarxwp" path="res://Sprites/footballchar/shoot/0002.png" id="70_fgtyl"]
-[ext_resource type="Texture2D" uid="uid://bojcs3jjx5le" path="res://Sprites/footballchar/shoot/0003.png" id="71_vhn6l"]
-[ext_resource type="Texture2D" uid="uid://du4thj12wup8" path="res://Sprites/footballchar/shoot/0004.png" id="72_mygt6"]
-[ext_resource type="Texture2D" uid="uid://claunq6kt38og" path="res://Sprites/footballchar/shoot/0005.png" id="73_fo6hq"]
-[ext_resource type="Texture2D" uid="uid://bxfiep1tcyjjo" path="res://Sprites/footballchar/shoot/0006.png" id="74_udeq4"]
-[ext_resource type="Texture2D" uid="uid://cyau13a20kof4" path="res://Sprites/footballchar/shoot/0007.png" id="75_3lre7"]
-[ext_resource type="Texture2D" uid="uid://gjvdyqcyr0k7" path="res://Sprites/footballchar/shoot/0008.png" id="76_5t8xi"]
-[ext_resource type="Texture2D" uid="uid://bh21qtui0h11e" path="res://Sprites/footballchar/shoot/0009.png" id="77_0egyd"]
-[ext_resource type="Texture2D" uid="uid://c3mg67p7dvu2k" path="res://Sprites/footballchar/shoot/0010.png" id="78_yp23h"]
-[ext_resource type="Texture2D" uid="uid://bc3dx7v0bctqd" path="res://Sprites/footballchar/shoot/0011.png" id="79_1n6a3"]
-[ext_resource type="Texture2D" uid="uid://cnnl5l3ji3rhc" path="res://Sprites/footballchar/shoot/0012.png" id="80_8mqca"]
-[ext_resource type="Texture2D" uid="uid://dbl3l18j0bpev" path="res://Sprites/footballchar/shoot/0013.png" id="81_27nhf"]
-[ext_resource type="Texture2D" uid="uid://b0p8xre37c1cw" path="res://Sprites/footballchar/shoot/0014.png" id="82_hmcph"]
-[ext_resource type="Texture2D" uid="uid://iiowh23p87j7" path="res://Sprites/footballchar/shoot/0015.png" id="83_nj2ut"]
-[ext_resource type="Texture2D" uid="uid://df6yrgabql3fx" path="res://Sprites/footballchar/shoot/0016.png" id="84_no67m"]
-[ext_resource type="Texture2D" uid="uid://8lhhp4lqbkxy" path="res://Sprites/footballchar/shoot/0017.png" id="85_6lx6e"]
-[ext_resource type="Texture2D" uid="uid://c7grfg6etqg12" path="res://Sprites/footballchar/shoot/0018.png" id="86_sj67n"]
-[ext_resource type="Texture2D" uid="uid://gvp4ykt2g725" path="res://Sprites/footballchar/shoot/0019.png" id="87_4qye4"]
-[ext_resource type="Texture2D" uid="uid://q4ctby5tmmgk" path="res://Sprites/footballchar/shoot/0020.png" id="88_dwee1"]
-[ext_resource type="Texture2D" uid="uid://bskrqbt16wwrh" path="res://Sprites/footballchar/walk/0001.png" id="92_2tyck"]
-[ext_resource type="Texture2D" uid="uid://cwrhblf0gm655" path="res://Sprites/footballchar/walk/0002.png" id="93_oysev"]
-[ext_resource type="Texture2D" uid="uid://cuenwl3uvcedr" path="res://Sprites/footballchar/walk/0003.png" id="94_oebg5"]
-[ext_resource type="Texture2D" uid="uid://cbxjnqqik4slg" path="res://Sprites/footballchar/walk/0004.png" id="95_7ves1"]
-[ext_resource type="Texture2D" uid="uid://bb7d8qt1a7qkh" path="res://Sprites/footballchar/walk/0005.png" id="96_pr5wo"]
-[ext_resource type="Texture2D" uid="uid://dy444kwdls02" path="res://Sprites/footballchar/walk/0006.png" id="97_lq1fr"]
-[ext_resource type="Texture2D" uid="uid://l1x573iwc4kn" path="res://Sprites/footballchar/walk/0007.png" id="98_wqmtj"]
-[ext_resource type="Texture2D" uid="uid://b3fkbvvrh6k5" path="res://Sprites/footballchar/walk/0008.png" id="99_l3skg"]
-[ext_resource type="Texture2D" uid="uid://dwkv3vmgchdh" path="res://Sprites/footballchar/walk/0009.png" id="100_picqn"]
-[ext_resource type="Texture2D" uid="uid://bhi7aditfxspj" path="res://Sprites/footballchar/walk/0010.png" id="101_j14rc"]
-[ext_resource type="Texture2D" uid="uid://bprhjqcvbguji" path="res://Sprites/footballchar/walk/0011.png" id="102_puhh7"]
-[ext_resource type="Texture2D" uid="uid://dwyp52u3fuiju" path="res://Sprites/footballchar/walk/0012.png" id="103_pmv15"]
-[ext_resource type="Texture2D" uid="uid://cnbjbuw3iaiom" path="res://Sprites/footballchar/walk/0013.png" id="104_ikfrk"]
-[ext_resource type="Texture2D" uid="uid://dg76qca0a0cxb" path="res://Sprites/footballchar/walk/0014.png" id="105_ldcmb"]
-[ext_resource type="Texture2D" uid="uid://d8t1ru8cejt" path="res://Sprites/footballchar/walk/0015.png" id="106_hhvyw"]
-[ext_resource type="Texture2D" uid="uid://kxjpi35jkn8o" path="res://Sprites/footballchar/walk/0016.png" id="107_en0rf"]
-[ext_resource type="Texture2D" uid="uid://dne0pf6qpcg3m" path="res://Sprites/footballchar/walk/0017.png" id="108_roy3o"]
-[ext_resource type="Texture2D" uid="uid://bwpuaix7tnm8n" path="res://Sprites/footballchar/walk/0018.png" id="109_7nmnp"]
-[ext_resource type="Texture2D" uid="uid://curtdir303igw" path="res://Sprites/footballchar/walk/0019.png" id="110_36ln8"]
-[ext_resource type="Texture2D" uid="uid://rib472rfh12j" path="res://Sprites/footballchar/walk/0020.png" id="111_6ftl3"]
-[ext_resource type="Texture2D" uid="uid://xwhc1h2iibng" path="res://Sprites/footballchar/walk/0021.png" id="112_rwywc"]
-[ext_resource type="Texture2D" uid="uid://cudipytqbp3l2" path="res://Sprites/footballchar/walk/0022.png" id="113_2itni"]
-[ext_resource type="Texture2D" uid="uid://puy66tglbne2" path="res://Sprites/footballchar/walk/0023.png" id="114_iryjx"]
-[ext_resource type="Texture2D" uid="uid://dwcbeugxj8ghu" path="res://Sprites/footballchar/walk/0024.png" id="115_2gt07"]
-[ext_resource type="Texture2D" uid="uid://bp05q4jla1i3a" path="res://Sprites/footballchar/walk/0025.png" id="116_1y73p"]
+[ext_resource type="Texture2D" uid="uid://copuebjnfxg5q" path="res://Sprites/footballchar2/fall/0001.png" id="3_4qye4"]
+[ext_resource type="Texture2D" uid="uid://cahhu2big1x8p" path="res://Sprites/footballchar2/fall/0002.png" id="4_dwee1"]
+[ext_resource type="Texture2D" uid="uid://tpeg2vsewryw" path="res://Sprites/footballchar2/fall/0003.png" id="5_p4k0b"]
+[ext_resource type="Texture2D" uid="uid://bqb754wd5oaci" path="res://Sprites/footballchar2/fall/0004.png" id="6_8y1xv"]
+[ext_resource type="Texture2D" uid="uid://14iihfsx5muy" path="res://Sprites/footballchar2/fall/0005.png" id="7_2quun"]
+[ext_resource type="Texture2D" uid="uid://d30vq17ajo1n0" path="res://Sprites/footballchar2/fall/0006.png" id="8_weq6b"]
+[ext_resource type="Texture2D" uid="uid://q2c2nuaado5" path="res://Sprites/footballchar2/fall/0007.png" id="9_2tyck"]
+[ext_resource type="Texture2D" uid="uid://gltoiy7gno7i" path="res://Sprites/footballchar2/fall/0008.png" id="10_oysev"]
+[ext_resource type="Texture2D" uid="uid://c4vfp4i4gowg4" path="res://Sprites/footballchar2/headbump/0001.png" id="11_oebg5"]
+[ext_resource type="Texture2D" uid="uid://4keh41u4xx8" path="res://Sprites/footballchar2/headbump/0002.png" id="12_7ves1"]
+[ext_resource type="Texture2D" uid="uid://lye62bkwjqfm" path="res://Sprites/footballchar2/headbump/0003.png" id="13_pr5wo"]
+[ext_resource type="Texture2D" uid="uid://c8ctlkb7uh0qt" path="res://Sprites/footballchar2/headbump/0004.png" id="14_lq1fr"]
+[ext_resource type="Texture2D" uid="uid://mbbp7bik7wjx" path="res://Sprites/footballchar2/headbump/0005.png" id="15_wqmtj"]
+[ext_resource type="Texture2D" uid="uid://bpfw33jug3x30" path="res://Sprites/footballchar2/headbump/0006.png" id="16_l3skg"]
+[ext_resource type="Texture2D" uid="uid://c432cyghwfnfo" path="res://Sprites/footballchar2/headbump/0007.png" id="17_picqn"]
+[ext_resource type="Texture2D" uid="uid://blpohdbdtbk6x" path="res://Sprites/footballchar2/headbump/0008.png" id="18_j14rc"]
+[ext_resource type="Texture2D" uid="uid://61iwslwwhip1" path="res://Sprites/footballchar2/headbump/0009.png" id="19_puhh7"]
+[ext_resource type="Texture2D" uid="uid://d3jvrlagxqaw1" path="res://Sprites/footballchar2/headbump/0010.png" id="20_pmv15"]
+[ext_resource type="Texture2D" uid="uid://c875qq4ob8nlk" path="res://Sprites/footballchar2/headbump/0011.png" id="21_ikfrk"]
+[ext_resource type="Texture2D" uid="uid://yjnl2h7cd1ad" path="res://Sprites/footballchar2/headbump/0012.png" id="22_ldcmb"]
+[ext_resource type="Texture2D" uid="uid://swn552sp4ljq" path="res://Sprites/footballchar2/headbump/0013.png" id="23_hhvyw"]
+[ext_resource type="Texture2D" uid="uid://bpy6ym433i1i3" path="res://Sprites/footballchar2/headbump/0014.png" id="24_en0rf"]
+[ext_resource type="Texture2D" uid="uid://damin80g17kde" path="res://Sprites/footballchar2/headbump/0015.png" id="25_roy3o"]
+[ext_resource type="Texture2D" uid="uid://dtc7s3b0hd0qx" path="res://Sprites/footballchar2/idle/0001.png" id="26_7nmnp"]
+[ext_resource type="Texture2D" uid="uid://crkpp8yqecxnk" path="res://Sprites/footballchar2/idle/0002.png" id="27_36ln8"]
+[ext_resource type="Texture2D" uid="uid://cv2kxl5e5s81e" path="res://Sprites/footballchar2/idle/0003.png" id="28_6ftl3"]
+[ext_resource type="Texture2D" uid="uid://dgpwvnuqlngkr" path="res://Sprites/footballchar2/idle/0004.png" id="29_rwywc"]
+[ext_resource type="Texture2D" uid="uid://bpmjftmqmd7g0" path="res://Sprites/footballchar2/idle/0005.png" id="30_2itni"]
+[ext_resource type="Texture2D" uid="uid://y12s0x3leplo" path="res://Sprites/footballchar2/idle/0006.png" id="31_iryjx"]
+[ext_resource type="Texture2D" uid="uid://08kpl72c6vrx" path="res://Sprites/footballchar2/idle/0007.png" id="32_2gt07"]
+[ext_resource type="Texture2D" uid="uid://dkq7bdopepc32" path="res://Sprites/footballchar2/idle/0008.png" id="33_1y73p"]
+[ext_resource type="Texture2D" uid="uid://du2wob7oqrrg0" path="res://Sprites/footballchar2/idle/0009.png" id="34_xaqvk"]
+[ext_resource type="Texture2D" uid="uid://tda6i4mq87l1" path="res://Sprites/footballchar2/idle/0010.png" id="35_ndq16"]
+[ext_resource type="Texture2D" uid="uid://du0obkxmpr8mk" path="res://Sprites/footballchar2/idle/0011.png" id="36_0fjvb"]
+[ext_resource type="Texture2D" uid="uid://ftrhl2imlck8" path="res://Sprites/footballchar2/idle/0012.png" id="37_ogng2"]
+[ext_resource type="Texture2D" uid="uid://ckv7xrtdaep0n" path="res://Sprites/footballchar2/idle/0013.png" id="38_y66ot"]
+[ext_resource type="Texture2D" uid="uid://b0b6e8enud8oa" path="res://Sprites/footballchar2/idle/0014.png" id="39_dxqnl"]
+[ext_resource type="Texture2D" uid="uid://cofx2u3xddqxk" path="res://Sprites/footballchar2/idle/0015.png" id="40_kkk22"]
+[ext_resource type="Texture2D" uid="uid://dvvjtdlq0kiyl" path="res://Sprites/footballchar2/idle/0016.png" id="41_i67r5"]
+[ext_resource type="Texture2D" uid="uid://b0svybludhoql" path="res://Sprites/footballchar2/idle/0017.png" id="42_7snlf"]
+[ext_resource type="Texture2D" uid="uid://r0cjr74u7fee" path="res://Sprites/footballchar2/idle/0018.png" id="43_qjkpl"]
+[ext_resource type="Texture2D" uid="uid://virrmcpibnmu" path="res://Sprites/footballchar2/idle/0019.png" id="44_l262q"]
+[ext_resource type="Texture2D" uid="uid://pqhwbtnxpn25" path="res://Sprites/footballchar2/idle/0020.png" id="45_7vw33"]
+[ext_resource type="Texture2D" uid="uid://15mg1v8ua4sb" path="res://Sprites/footballchar2/idle/0021.png" id="46_3c5kh"]
+[ext_resource type="Texture2D" uid="uid://bwmauitlyghdx" path="res://Sprites/footballchar2/idle/0022.png" id="47_en4re"]
+[ext_resource type="Texture2D" uid="uid://bper2wcrmgxqk" path="res://Sprites/footballchar2/idle/0023.png" id="48_o1l0f"]
+[ext_resource type="Texture2D" uid="uid://dqutxclsphf66" path="res://Sprites/footballchar2/idle/0024.png" id="49_qs7fb"]
+[ext_resource type="Texture2D" uid="uid://bgmjn45bsp4qh" path="res://Sprites/footballchar2/idle/0025.png" id="50_fw8f6"]
+[ext_resource type="Texture2D" uid="uid://vhtxuvxnqaf8" path="res://Sprites/footballchar2/idle/0026.png" id="51_1qk7q"]
+[ext_resource type="Texture2D" uid="uid://cq7y1c6tqqs15" path="res://Sprites/footballchar2/idle/0027.png" id="52_fi73g"]
+[ext_resource type="Texture2D" uid="uid://dt376pdtq7tgg" path="res://Sprites/footballchar2/idle/0028.png" id="53_giupx"]
+[ext_resource type="Texture2D" uid="uid://6yv321qnsvp7" path="res://Sprites/footballchar2/idle/0029.png" id="54_lqkvr"]
+[ext_resource type="Texture2D" uid="uid://blqb6inv75h7x" path="res://Sprites/footballchar2/idle/0030.png" id="55_d10fu"]
+[ext_resource type="Texture2D" uid="uid://c3ujq7d5mcpkg" path="res://Sprites/footballchar2/idle/0031.png" id="56_avkga"]
+[ext_resource type="Texture2D" uid="uid://dha2l85lihxgr" path="res://Sprites/footballchar2/idle/0032.png" id="57_bmxw8"]
+[ext_resource type="Texture2D" uid="uid://dkchv2pvbroce" path="res://Sprites/footballchar2/jump/0001.png" id="58_wvf82"]
+[ext_resource type="Texture2D" uid="uid://bwwiwt75tf3io" path="res://Sprites/footballchar2/jump/0002.png" id="59_856r7"]
+[ext_resource type="Texture2D" uid="uid://cbkoa1ugche4l" path="res://Sprites/footballchar2/jump/0003.png" id="60_7snlt"]
+[ext_resource type="Texture2D" uid="uid://30stap0dbe1l" path="res://Sprites/footballchar2/jump/0004.png" id="61_epd3s"]
+[ext_resource type="Texture2D" uid="uid://cuhu40wlellpr" path="res://Sprites/footballchar2/jump/0005.png" id="62_lwnbh"]
+[ext_resource type="Texture2D" uid="uid://b2u5jtsgug3jk" path="res://Sprites/footballchar2/jump/0006.png" id="63_4eu4j"]
+[ext_resource type="Texture2D" uid="uid://cbugx2pqod4mp" path="res://Sprites/footballchar2/jump/0007.png" id="64_406sr"]
+[ext_resource type="Texture2D" uid="uid://t5hst6440h7i" path="res://Sprites/footballchar2/jump/0008.png" id="65_c81rx"]
+[ext_resource type="Texture2D" uid="uid://d0qfo2e3xc8sj" path="res://Sprites/footballchar2/shoot/0001.png" id="66_cg5co"]
+[ext_resource type="Texture2D" uid="uid://c1mgcf6yggwdx" path="res://Sprites/footballchar2/shoot/0002.png" id="67_5yw44"]
+[ext_resource type="Texture2D" uid="uid://c0ew7r118xgki" path="res://Sprites/footballchar2/shoot/0003.png" id="68_im6hr"]
+[ext_resource type="Texture2D" uid="uid://ceohg0p6ihe3h" path="res://Sprites/footballchar2/shoot/0004.png" id="69_ydyjx"]
+[ext_resource type="Texture2D" uid="uid://dbuao8xwcfpl6" path="res://Sprites/footballchar2/shoot/0005.png" id="70_wxw26"]
+[ext_resource type="Texture2D" uid="uid://dgwqp7xds3722" path="res://Sprites/footballchar2/shoot/0006.png" id="71_58rqs"]
+[ext_resource type="Texture2D" uid="uid://bk160ogwgtewu" path="res://Sprites/footballchar2/shoot/0007.png" id="72_st45s"]
+[ext_resource type="Texture2D" uid="uid://3skxuxp68oep" path="res://Sprites/footballchar2/shoot/0008.png" id="73_snoqu"]
+[ext_resource type="Texture2D" uid="uid://blks8gqgogr6t" path="res://Sprites/footballchar2/shoot/0009.png" id="74_6uaq4"]
+[ext_resource type="Texture2D" uid="uid://dgqkevy2digmu" path="res://Sprites/footballchar2/shoot/0010.png" id="75_d7kes"]
+[ext_resource type="Texture2D" uid="uid://h2xf88ugp4kv" path="res://Sprites/footballchar2/shoot/0011.png" id="76_se37a"]
+[ext_resource type="Texture2D" uid="uid://uitawg5k4ebc" path="res://Sprites/footballchar2/shoot/0012.png" id="77_7daru"]
+[ext_resource type="Texture2D" uid="uid://bio2gq34t8x0s" path="res://Sprites/footballchar2/shoot/0013.png" id="78_oty5n"]
+[ext_resource type="Texture2D" uid="uid://bxrhiegajy4yd" path="res://Sprites/footballchar2/shoot/0014.png" id="79_jx4rr"]
+[ext_resource type="Texture2D" uid="uid://uv6yycycmben" path="res://Sprites/footballchar2/shoot/0015.png" id="80_680dn"]
+[ext_resource type="Texture2D" uid="uid://yvhplq16viqe" path="res://Sprites/footballchar2/shoot/0016.png" id="81_2o4yt"]
+[ext_resource type="Texture2D" uid="uid://e0ns1w4xms5s" path="res://Sprites/footballchar2/shoot/0017.png" id="82_3fmc8"]
+[ext_resource type="Texture2D" uid="uid://cls4v4n2aqiss" path="res://Sprites/footballchar2/shoot/0018.png" id="83_vi28q"]
+[ext_resource type="Texture2D" uid="uid://ckh5rlciase0f" path="res://Sprites/footballchar2/shoot/0019.png" id="84_vte4y"]
+[ext_resource type="Texture2D" uid="uid://cpqgov4ihycq8" path="res://Sprites/footballchar2/shoot/0020.png" id="85_32rjm"]
+[ext_resource type="Texture2D" uid="uid://ou663lb8deql" path="res://Sprites/footballchar2/walk_cycle/0001.png" id="86_4qye4"]
+[ext_resource type="Texture2D" uid="uid://dcejfsb8nwy3c" path="res://Sprites/footballchar2/walk_cycle/0002.png" id="87_dwee1"]
+[ext_resource type="Texture2D" uid="uid://bwinjlod5y00l" path="res://Sprites/footballchar2/walk_cycle/0003.png" id="88_p4k0b"]
+[ext_resource type="Texture2D" uid="uid://chej3k4ffb263" path="res://Sprites/footballchar2/walk_cycle/0004.png" id="89_8y1xv"]
+[ext_resource type="Texture2D" uid="uid://bdi4rt0hkf2fq" path="res://Sprites/footballchar2/walk_cycle/0005.png" id="90_2quun"]
+[ext_resource type="Texture2D" uid="uid://i8fji4yne3qj" path="res://Sprites/footballchar2/walk_cycle/0006.png" id="91_weq6b"]
+[ext_resource type="Texture2D" uid="uid://d1dc4r1rb5k83" path="res://Sprites/footballchar2/walk_cycle/0007.png" id="92_2tyck"]
+[ext_resource type="Texture2D" uid="uid://bnx5wl8m4f467" path="res://Sprites/footballchar2/walk_cycle/0008.png" id="93_oysev"]
+[ext_resource type="Texture2D" uid="uid://d1u1uro6ax0bw" path="res://Sprites/footballchar2/walk_cycle/0009.png" id="94_oebg5"]
+[ext_resource type="Texture2D" uid="uid://cgcw6bo2lb18b" path="res://Sprites/footballchar2/walk_cycle/0010.png" id="95_7ves1"]
+[ext_resource type="Texture2D" uid="uid://bagkgrbdg8r4n" path="res://Sprites/footballchar2/walk_cycle/0011.png" id="96_pr5wo"]
+[ext_resource type="Texture2D" uid="uid://bpcf17mc3jkm" path="res://Sprites/footballchar2/walk_cycle/0012.png" id="97_lq1fr"]
+[ext_resource type="Texture2D" uid="uid://c8txyqi4b7yw7" path="res://Sprites/footballchar2/walk_cycle/0013.png" id="98_wqmtj"]
+[ext_resource type="Texture2D" uid="uid://c0a450g75s5ar" path="res://Sprites/footballchar2/walk_cycle/0014.png" id="99_l3skg"]
+[ext_resource type="Texture2D" uid="uid://c5t5cx3ei6ce" path="res://Sprites/footballchar2/walk_cycle/0015.png" id="100_picqn"]
+[ext_resource type="Texture2D" uid="uid://cljk2moea2rl2" path="res://Sprites/footballchar2/walk_cycle/0016.png" id="101_j14rc"]
+[ext_resource type="Texture2D" uid="uid://4f4ohf1cnl1y" path="res://Sprites/footballchar2/walk_cycle/0017.png" id="102_puhh7"]
+[ext_resource type="Texture2D" uid="uid://bwi7sydk4mff5" path="res://Sprites/footballchar2/walk_cycle/0018.png" id="103_pmv15"]
+[ext_resource type="Texture2D" uid="uid://cewgwwxysdb3e" path="res://Sprites/footballchar2/walk_cycle/0019.png" id="104_ikfrk"]
+[ext_resource type="Texture2D" uid="uid://bdvf6nt4ilp4p" path="res://Sprites/footballchar2/walk_cycle/0020.png" id="105_ldcmb"]
+[ext_resource type="Texture2D" uid="uid://c1giu4iyt1a8q" path="res://Sprites/footballchar2/walk_cycle/0021.png" id="106_hhvyw"]
+[ext_resource type="Texture2D" uid="uid://bciljhnjj0kdv" path="res://Sprites/footballchar2/walk_cycle/0022.png" id="107_en0rf"]
+[ext_resource type="Texture2D" uid="uid://djt4dy2qwekkr" path="res://Sprites/footballchar2/walk_cycle/0023.png" id="108_roy3o"]
+[ext_resource type="Texture2D" uid="uid://bffig4pki2qgx" path="res://Sprites/footballchar2/walk_cycle/0024.png" id="109_7nmnp"]
+[ext_resource type="Texture2D" uid="uid://st7mkh0w4k2b" path="res://Sprites/footballchar2/walk_cycle/0025.png" id="110_36ln8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
 radius = 18.0
@@ -334,28 +333,28 @@ _data = {
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_qvoyt")
+"texture": ExtResource("3_4qye4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_krddw")
+"texture": ExtResource("4_dwee1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_lvkrb")
+"texture": ExtResource("5_p4k0b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_3uuu7")
+"texture": ExtResource("6_8y1xv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_s1fhs")
+"texture": ExtResource("7_2quun")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_xdean")
+"texture": ExtResource("8_weq6b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_hdtaj")
+"texture": ExtResource("9_2tyck")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_ft7xc")
+"texture": ExtResource("10_oysev")
 }],
 "loop": 0,
 "name": &"fall",
@@ -363,49 +362,49 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_tpo0c")
+"texture": ExtResource("11_oebg5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_olhre")
+"texture": ExtResource("12_7ves1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_8kned")
+"texture": ExtResource("13_pr5wo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_doolw")
+"texture": ExtResource("14_lq1fr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_iggy0")
+"texture": ExtResource("15_wqmtj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_67qxe")
+"texture": ExtResource("16_l3skg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_h8xcu")
+"texture": ExtResource("17_picqn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_cf40s")
+"texture": ExtResource("18_j14rc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_hu3nd")
+"texture": ExtResource("19_puhh7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_q5d1a")
+"texture": ExtResource("20_pmv15")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_itusb")
+"texture": ExtResource("21_ikfrk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_7ixdd")
+"texture": ExtResource("22_ldcmb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_2aoyt")
+"texture": ExtResource("23_hhvyw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_e1d7x")
+"texture": ExtResource("24_en0rf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_uagc2")
+"texture": ExtResource("25_roy3o")
 }],
 "loop": 0,
 "name": &"head_bump",
@@ -413,100 +412,100 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("27_2swkj")
+"texture": ExtResource("26_7nmnp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_bhd7a")
+"texture": ExtResource("27_36ln8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_mqobo")
+"texture": ExtResource("28_6ftl3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_ihljs")
+"texture": ExtResource("29_rwywc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_f8sq6")
+"texture": ExtResource("30_2itni")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_041jo")
+"texture": ExtResource("31_iryjx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_flekd")
+"texture": ExtResource("32_2gt07")
 }, {
 "duration": 1.0,
-"texture": ExtResource("34_omlme")
+"texture": ExtResource("33_1y73p")
 }, {
 "duration": 1.0,
-"texture": ExtResource("35_poc1d")
+"texture": ExtResource("34_xaqvk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_e5qda")
+"texture": ExtResource("35_ndq16")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_7nxh3")
+"texture": ExtResource("36_0fjvb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_dd5tl")
+"texture": ExtResource("37_ogng2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_ury7l")
+"texture": ExtResource("38_y66ot")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_ks7en")
+"texture": ExtResource("39_dxqnl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("41_100c0")
+"texture": ExtResource("40_kkk22")
 }, {
 "duration": 1.0,
-"texture": ExtResource("42_xgbma")
+"texture": ExtResource("41_i67r5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("43_bhest")
+"texture": ExtResource("42_7snlf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_srscj")
+"texture": ExtResource("43_qjkpl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("45_mfng2")
+"texture": ExtResource("44_l262q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("46_ltpl0")
+"texture": ExtResource("45_7vw33")
 }, {
 "duration": 1.0,
-"texture": ExtResource("47_yexrr")
+"texture": ExtResource("46_3c5kh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("48_2fmpp")
+"texture": ExtResource("47_en4re")
 }, {
 "duration": 1.0,
-"texture": ExtResource("49_v1120")
+"texture": ExtResource("48_o1l0f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("50_af72f")
+"texture": ExtResource("49_qs7fb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("51_624bp")
+"texture": ExtResource("50_fw8f6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("52_5hi6g")
+"texture": ExtResource("51_1qk7q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("53_16cjr")
+"texture": ExtResource("52_fi73g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("54_nggng")
+"texture": ExtResource("53_giupx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("55_vmlka")
+"texture": ExtResource("54_lqkvr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("56_wk8k5")
+"texture": ExtResource("55_d10fu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("57_adxqy")
+"texture": ExtResource("56_avkga")
 }, {
 "duration": 1.0,
-"texture": ExtResource("58_0eol0")
+"texture": ExtResource("57_bmxw8")
 }],
 "loop": 1,
 "name": &"idle",
@@ -514,31 +513,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("59_poc1d")
+"texture": ExtResource("58_wvf82")
 }, {
 "duration": 1.0,
-"texture": ExtResource("60_e5qda")
+"texture": ExtResource("59_856r7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("61_7nxh3")
+"texture": ExtResource("60_7snlt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("62_dd5tl")
+"texture": ExtResource("61_epd3s")
 }, {
 "duration": 1.0,
-"texture": ExtResource("63_ury7l")
+"texture": ExtResource("62_lwnbh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("64_ks7en")
+"texture": ExtResource("63_4eu4j")
 }, {
 "duration": 1.0,
-"texture": ExtResource("65_100c0")
+"texture": ExtResource("64_406sr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("66_xgbma")
-}, {
-"duration": 1.0,
-"texture": ExtResource("67_bhest")
+"texture": ExtResource("65_c81rx")
 }],
 "loop": 0,
 "name": &"jump",
@@ -546,70 +542,88 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("69_u5mmc")
+"texture": ExtResource("66_cg5co")
 }, {
 "duration": 1.0,
-"texture": ExtResource("70_fgtyl")
+"texture": ExtResource("67_5yw44")
 }, {
 "duration": 1.0,
-"texture": ExtResource("71_vhn6l")
+"texture": ExtResource("68_im6hr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("72_mygt6")
+"texture": ExtResource("69_ydyjx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("73_fo6hq")
+"texture": ExtResource("70_wxw26")
 }, {
 "duration": 1.0,
-"texture": ExtResource("74_udeq4")
+"texture": ExtResource("71_58rqs")
 }, {
 "duration": 1.0,
-"texture": ExtResource("75_3lre7")
+"texture": ExtResource("72_st45s")
 }, {
 "duration": 1.0,
-"texture": ExtResource("76_5t8xi")
+"texture": ExtResource("73_snoqu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("77_0egyd")
+"texture": ExtResource("74_6uaq4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("78_yp23h")
+"texture": ExtResource("75_d7kes")
 }, {
 "duration": 1.0,
-"texture": ExtResource("79_1n6a3")
+"texture": ExtResource("76_se37a")
 }, {
 "duration": 1.0,
-"texture": ExtResource("80_8mqca")
+"texture": ExtResource("77_7daru")
 }, {
 "duration": 1.0,
-"texture": ExtResource("81_27nhf")
+"texture": ExtResource("78_oty5n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("82_hmcph")
+"texture": ExtResource("79_jx4rr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("83_nj2ut")
+"texture": ExtResource("80_680dn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("84_no67m")
+"texture": ExtResource("81_2o4yt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("85_6lx6e")
+"texture": ExtResource("82_3fmc8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("86_sj67n")
+"texture": ExtResource("83_vi28q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("87_4qye4")
+"texture": ExtResource("84_vte4y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("88_dwee1")
+"texture": ExtResource("85_32rjm")
 }],
 "loop": 0,
 "name": &"shoot",
 "speed": 24.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("86_4qye4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_dwee1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_p4k0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_8y1xv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_2quun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_weq6b")
+}, {
 "duration": 1.0,
 "texture": ExtResource("92_2tyck")
 }, {
@@ -666,24 +680,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("110_36ln8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("111_6ftl3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("112_rwywc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("113_2itni")
-}, {
-"duration": 1.0,
-"texture": ExtResource("114_iryjx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("115_2gt07")
-}, {
-"duration": 1.0,
-"texture": ExtResource("116_1y73p")
 }],
 "loop": 1,
 "name": &"walk",
@@ -796,14 +792,14 @@ states/walk/position = Vector2(295, 43)
 transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_2quun"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_weq6b"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_2tyck"), "walk", "jump", SubResource("AnimationNodeStateMachineTransition_oysev"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_dwee1"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_oebg5"), "fall", "idle", SubResource("AnimationNodeStateMachineTransition_7ves1"), "idle", "shoot", SubResource("AnimationNodeStateMachineTransition_p4k0b"), "idle", "head_bump", SubResource("AnimationNodeStateMachineTransition_8y1xv"), "walk", "head_bump", SubResource("AnimationNodeStateMachineTransition_pr5wo"), "walk", "shoot", SubResource("AnimationNodeStateMachineTransition_lq1fr"), "jump", "head_bump", SubResource("AnimationNodeStateMachineTransition_wqmtj"), "fall", "head_bump", SubResource("AnimationNodeStateMachineTransition_l3skg"), "head_bump", "idle", SubResource("AnimationNodeStateMachineTransition_picqn"), "jump", "shoot", SubResource("AnimationNodeStateMachineTransition_j14rc"), "fall", "shoot", SubResource("AnimationNodeStateMachineTransition_puhh7"), "shoot", "idle", SubResource("AnimationNodeStateMachineTransition_pmv15")]
 graph_offset = Vector2(-23.286285, 56)
 
-[node name="Player" type="CharacterBody2D" unique_id=1071459687 node_paths=PackedStringArray("camera")]
+[node name="Player" type="CharacterBody2D" unique_id=1071459687]
 collision_layer = 4
 collision_mask = 17
 script = ExtResource("1_xqo16")
 speed = 400
 shoot_strength = 700
+meele_hitbox_timer = 0.4
 ball_scene = ExtResource("2_bs8co")
-camera = NodePath("")
 health = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1012738748]
@@ -826,12 +822,11 @@ position = Vector2(22, 43.6)
 position = Vector2(22, 0)
 collision_layer = 8
 collision_mask = 2
-monitoring = false
-monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeHitbox" unique_id=711429151]
+[node name="col" type="CollisionShape2D" parent="MeleeHitbox" unique_id=711429151]
 position = Vector2(39.5, 0)
 shape = SubResource("RectangleShape2D_bs8co")
+disabled = true
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=30626337]
 root_node = NodePath("../Icon")
