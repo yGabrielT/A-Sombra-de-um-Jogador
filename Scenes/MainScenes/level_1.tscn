@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b4xsd7elh37j1" path="res://Scenes/InstaceableScenes/boss.tscn" id="3_tyff8"]
 [ext_resource type="Script" uid="uid://cjersx80p6f7d" path="res://Scripts/game_controller.gd" id="4_a1ksf"]
 [ext_resource type="PackedScene" uid="uid://bxmxnrqu6f2qy" path="res://Scenes/InstaceableScenes/goalie.tscn" id="5_8wmor"]
+[ext_resource type="Script" uid="uid://tksbwbhjbi3j" path="res://Scripts/audio_controller.gd" id="7_ru5kf"]
 [ext_resource type="Texture2D" uid="uid://c2mapgiflru86" path="res://Sprites/level/Free Park Zone Tileset/2 Background/Night/1.png" id="8_8buwq"]
 [ext_resource type="Script" uid="uid://l3mii16qoepf" path="res://Scripts/pause_menu.gd" id="8_i3mbk"]
 [ext_resource type="Texture2D" uid="uid://e1ui4ud07a5r" path="res://Sprites/level/Free Park Zone Tileset/2 Background/Night/2.png" id="9_sj1hn"]
@@ -69,6 +70,9 @@ position = Vector2(2025, 48)
 
 [node name="GameController" type="Node2D" parent="GameControllers" unique_id=920766714]
 script = ExtResource("4_a1ksf")
+
+[node name="AudioController" type="Node2D" parent="GameControllers" unique_id=1579180411]
+script = ExtResource("7_ru5kf")
 
 [node name="Cam" type="Camera2D" parent="." unique_id=2046632134]
 process_priority = 1

@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bokqyvoop42is" path="res://Scripts/player_controller.gd" id="1_xqo16"]
 [ext_resource type="PackedScene" uid="uid://c8suumchccy51" path="res://Scenes/InstaceableScenes/ball.tscn" id="2_bs8co"]
 [ext_resource type="Texture2D" uid="uid://copuebjnfxg5q" path="res://Sprites/footballchar2/fall/0001.png" id="3_4qye4"]
+[ext_resource type="AudioStream" uid="uid://c66hyf73gpri" path="res://Audios/Soccer ball bouncing 1.mp3" id="3_dwee1"]
+[ext_resource type="AudioStream" uid="uid://bgv1a6va0n6j1" path="res://Audios/Walk on the grass.mp3" id="3_p4k0b"]
 [ext_resource type="Texture2D" uid="uid://cahhu2big1x8p" path="res://Sprites/footballchar2/fall/0002.png" id="4_dwee1"]
 [ext_resource type="Texture2D" uid="uid://tpeg2vsewryw" path="res://Sprites/footballchar2/fall/0003.png" id="5_p4k0b"]
 [ext_resource type="Texture2D" uid="uid://bqb754wd5oaci" path="res://Sprites/footballchar2/fall/0004.png" id="6_8y1xv"]
@@ -802,6 +804,16 @@ meele_hitbox_timer = 0.4
 ball_scene = ExtResource("2_bs8co")
 health = 100
 
+[node name="WalkOnTheGrass" type="AudioStreamPlayer2D" parent="." unique_id=1040580189]
+unique_name_in_owner = true
+stream = ExtResource("3_p4k0b")
+bus = &"SFX"
+
+[node name="SoccerBallBouncing1" type="AudioStreamPlayer2D" parent="." unique_id=1756481965]
+unique_name_in_owner = true
+stream = ExtResource("3_dwee1")
+bus = &"SFX"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1012738748]
 shape = SubResource("CapsuleShape2D_g4v7s")
 
@@ -833,3 +845,5 @@ root_node = NodePath("../Icon")
 tree_root = SubResource("AnimationNodeStateMachine_weq6b")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
+
+[connection signal="frame_changed" from="Icon" to="." method="_on_icon_frames_changed"]

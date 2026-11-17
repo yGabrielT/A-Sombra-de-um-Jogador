@@ -31,6 +31,7 @@ var falling : bool
 var shoot_timer : float
 var can_shoot : bool = true
 var game_paused : bool = false
+var walk_sprites : Array[int] = [2,14]
 
 func _ready() -> void:
 	inverse_pos = -(ball_pos.position.x)
@@ -82,6 +83,7 @@ func shoot() -> void:
 	shooting = true
 	char_sprite.play("shoot")
 	await get_tree().create_timer(.2).timeout
+	%SoccerBallBouncing1.play()
 	var ball_instance := ball_scene.instantiate()
 	get_tree().current_scene.add_child(ball_instance)
 	ball_instance.name = "Ball"
@@ -130,3 +132,10 @@ func handle_timers(delta : float):
 			can_shoot = true
 		else:
 			shoot_timer += delta
+
+
+func _on_icon_frames_changed() -> void:
+	if char_sprite.animation == "walk":
+		if char_sprite.frame in walk_sprites:
+			%WalkOnTheGrass.play()
+		
