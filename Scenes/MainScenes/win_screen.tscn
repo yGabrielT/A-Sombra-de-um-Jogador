@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cyos1gk0bp0ny" path="res://Scripts/win_screen.gd" id="1_st02r"]
 [ext_resource type="Texture2D" uid="uid://c1bg3fu4tjij6" path="res://Sprites/scenesArts/footballGameWinArt.png" id="2_st02r"]
+[ext_resource type="AudioStream" uid="uid://bet5rvghc6j5q" path="res://Audios/win screen.mp3" id="3_6j2wd"]
 
 [node name="WinScreen" type="Control" unique_id=2053210910]
 layout_mode = 3
@@ -11,6 +12,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_st02r")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=610689808]
+stream = ExtResource("3_6j2wd")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
 
 [node name="FootballGameMainArt" type="Sprite2D" parent="." unique_id=1112406408]
 position = Vector2(191.65503, 108.00001)
@@ -36,7 +43,9 @@ alignment = 1
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=781484144]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.71724504, 0.4038452, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.59607846)
 theme_override_colors/font_outline_color = Color(4.4520945e-07, 0.25822303, 0.07614956, 1)
+theme_override_constants/shadow_offset_y = 7
 theme_override_constants/outline_size = 13
 theme_override_font_sizes/font_size = 32
 text = "Você ganhou!"

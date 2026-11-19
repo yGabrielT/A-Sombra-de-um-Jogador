@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cuyawyyrwp2yo" path="res://Scripts/main_menu_controller.gd" id="1_cr60d"]
 [ext_resource type="Texture2D" uid="uid://n3he6vfidm51" path="res://Sprites/scenesArts/footballGamedefeatArt.png" id="2_4olxp"]
+[ext_resource type="AudioStream" uid="uid://bdxxtc6g6qeno" path="res://Audios/412053__hardukk__gameover_dark.wav" id="3_evbn1"]
 
 [node name="GameOver" type="Control" unique_id=2053210910]
 layout_mode = 3
@@ -35,7 +36,10 @@ alignment = 1
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=781484144]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8595056, 0, 0.14829269, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.73333335)
 theme_override_colors/font_outline_color = Color(0.35879773, 0, 0.0056015532, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 5
 theme_override_constants/outline_size = 9
 theme_override_font_sizes/font_size = 40
 text = "GAME OVER"
@@ -48,5 +52,10 @@ alignment = 1
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1473062440]
 layout_mode = 2
 text = "Tentar novamente"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2080740461]
+stream = ExtResource("3_evbn1")
+autoplay = true
+mix_target = 2
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
