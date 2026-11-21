@@ -11,6 +11,7 @@ var is_on_smash_animation = false
 
 @onready var grounds := $Grounds
 @onready var screen_notifier := $ScreenNotifier
+@onready var smash_sound := preload("res://Audios/The stone is crushed.mp3")
 
 func _ready() -> void:
 	super._ready()
@@ -70,6 +71,7 @@ func smash():
 		start_smash_anim()
 
 func start_smash_anim():
+	Global.audio_controller.play_sound_with_pitch(smash_sound,.2,.5)
 	var grounds_nodes = grounds.get_children()
 	var tween = get_tree().create_tween()
 	tween.tween_property(grounds_nodes[0], "position", Vector2(0,-16),.1)
@@ -88,4 +90,4 @@ func start_smash_anim():
 
 func _on_ground_hit(body: Node2D) -> void:
 	if body.name == "Player":
-		body.health -= 5
+		body.damage(5)

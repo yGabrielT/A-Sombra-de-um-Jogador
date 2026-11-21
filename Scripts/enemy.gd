@@ -11,6 +11,7 @@ var initial_raycast_target_position : Vector2
 
 @onready var raycast : RayCast2D = $RayCast2D
 @onready var sprite : AnimatedSprite2D = $Sprite
+@onready var hit_sound : AudioStream = preload("res://Audios/hit.mp3")
 
 func _ready() -> void:
 	initial_raycast_target_position = raycast.target_position
@@ -32,6 +33,7 @@ func on_enemy_hit(body: Node2D) -> void:
 	
 	if body.name.contains("Ball"):
 		health -= 35
+		Global.audio_controller.play_sound_with_pitch(hit_sound,1.0,.3)
 		if health <= 0:
 			self.queue_free()
 			Global.game_controller.enemys_killed += 1
@@ -40,7 +42,8 @@ func on_enemy_hit(body: Node2D) -> void:
 func on_area_enemy_hit(area: Area2D) -> void:
 	print(area.name)
 	if area.name == "MeleeHitbox":
-		health -= 10
+		health -= 40
+		Global.audio_controller.play_sound_with_pitch(hit_sound,.7,.3)
 		if health <= 0:
 			self.queue_free()
 			Global.game_controller.enemys_killed += 1

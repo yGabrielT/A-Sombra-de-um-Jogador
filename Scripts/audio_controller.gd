@@ -9,7 +9,7 @@ var ambient_bus := AudioServer.get_bus_index("Ambient")
 func _enter_tree() -> void:
 	Global.audio_controller = self
 
-func play_sound_with_pitch(stream : AudioStream, pitch : float, volume : float = 1.0) -> void:
+func play_sound_with_pitch(stream : AudioStream, pitch : float = 1.0, volume : float = 1.0) -> void:
 	var sound_instance = AudioStreamPlayer.new()
 	self.add_child(sound_instance)
 	sound_instance.bus = "SFX"
@@ -18,7 +18,7 @@ func play_sound_with_pitch(stream : AudioStream, pitch : float, volume : float =
 	sound_instance.pitch_scale = pitch
 	sound_instance.play()
 
-func play_sounds_with_pitch(stream : Array[AudioStream], pitch : float, volume : float = 1.0) -> void:
+func play_sounds_with_pitch(stream : Array[AudioStream], pitch : float = 1.0, volume : float = 1.0) -> void:
 	var sound_instance = AudioStreamPlayer.new()
 	self.add_child(sound_instance)
 	var i = (randi_range(1,stream.size())) - 1

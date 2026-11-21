@@ -17,6 +17,10 @@ extends CharacterBody2D
 @onready var meele_hitbox_col := $MeleeHitbox/col
 @onready var char_sprite := $Icon
 @onready var anim_tree := $AnimationTree
+@onready var hit_sound := preload("res://Audios/hit 2.mp3")
+@onready var walk_sound := preload("res://Audios/Walk on the grass.mp3")
+@onready var punch_sound := preload("res://Audios/punch.mp3")
+@onready var ball_sound := preload("res://Audios/Soccer ball bouncing 1.mp3")
 
 var smooth_speed : float
 var direction_to_mouse : Vector2
@@ -39,8 +43,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	walk(delta)
 	move_and_slide()
-	if health <= 0:
-		get_tree().change_scene_to_file("res://Scenes/MainScenes/game_over.tscn")
+	
 	follow_camera(delta)
 
 func _process(delta: float) -> void:
@@ -83,7 +86,7 @@ func shoot() -> void:
 	shooting = true
 	char_sprite.play("shoot")
 	await get_tree().create_timer(.2).timeout
-	%SoccerBallBouncing1.play()
+	Global.audio_controller.play_sound_with_pitch(ball_sound)
 	var ball_instance := ball_scene.instantiate()
 	get_tree().current_scene.add_child(ball_instance)
 	ball_instance.name = "Ball"
@@ -99,6 +102,7 @@ func melee() -> void:
 	meele_hitbox_col.disabled = false
 	meleeing = true
 	char_sprite.play("head_bump")
+	Global.audio_controller.play_sound_with_pitch(punch_sound)
 	await get_tree().create_timer(meele_hitbox_timer).timeout
 	meleeing = false
 	meele_hitbox_col.disabled = true
@@ -133,9 +137,14 @@ func handle_timers(delta : float):
 		else:
 			shoot_timer += delta
 
+func damage(damage_amount : int):
+	health -= damage_amount
+	Global.audio_controller.play_sound_with_pitch(hit_sound)
+	if health <= 0:
+		get_tree().change_scene_to_file("res://Scenes/MainScenes/game_over.tscn")
 
 func _on_icon_frames_changed() -> void:
 	if char_sprite.animation == "walk":
 		if char_sprite.frame in walk_sprites:
-			%WalkOnTheGrass.play()
+			Global.audio_controller.play_sound_with_pitch(walk_sound,randf_range(0.7,1.1))
 		

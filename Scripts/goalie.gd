@@ -28,11 +28,11 @@ func _physics_process(delta: float) -> void:
 		if can_melee:
 			can_melee = false
 			print("atacou na mão")
-			Global.game_controller.player.health -= 10
+			Global.game_controller.player.damage(10)
 	handle_melee_cooldown(delta)
+	move_and_slide()
 	if health <= 0:
 		queue_free()
-	move_and_slide()
 	
 
 

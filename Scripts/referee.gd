@@ -7,6 +7,7 @@ var can_shoot := true
 var shoot_timer : float
 
 @onready var spawn_pos = $spawn
+@onready var throw_sound = preload("res://Audios/throw.mp3")
 
 func _ready() -> void:
 	super._ready()
@@ -27,6 +28,7 @@ func shoot_card(delta):
 		can_shoot = false
 		sprite.play("shoot_card")
 		await get_tree().create_timer(1.416).timeout
+		Global.audio_controller.play_sound_with_pitch(throw_sound)
 		var card_instance = card_scene.instantiate()
 		get_tree().current_scene.add_child(card_instance)
 		card_instance.direction = current_direction

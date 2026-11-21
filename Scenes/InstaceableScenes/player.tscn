@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://copuebjnfxg5q" path="res://Sprites/footballchar2/fall/0001.png" id="3_4qye4"]
 [ext_resource type="AudioStream" uid="uid://c66hyf73gpri" path="res://Audios/Soccer ball bouncing 1.mp3" id="3_dwee1"]
 [ext_resource type="AudioStream" uid="uid://bgv1a6va0n6j1" path="res://Audios/Walk on the grass.mp3" id="3_p4k0b"]
+[ext_resource type="AudioStream" uid="uid://br44x6fksldy" path="res://Audios/hit 2.mp3" id="4_2quun"]
 [ext_resource type="Texture2D" uid="uid://cahhu2big1x8p" path="res://Sprites/footballchar2/fall/0002.png" id="4_dwee1"]
 [ext_resource type="Texture2D" uid="uid://tpeg2vsewryw" path="res://Sprites/footballchar2/fall/0003.png" id="5_p4k0b"]
 [ext_resource type="Texture2D" uid="uid://bqb754wd5oaci" path="res://Sprites/footballchar2/fall/0004.png" id="6_8y1xv"]
@@ -112,6 +113,7 @@
 [ext_resource type="Texture2D" uid="uid://djt4dy2qwekkr" path="res://Sprites/footballchar2/walk_cycle/0023.png" id="108_roy3o"]
 [ext_resource type="Texture2D" uid="uid://bffig4pki2qgx" path="res://Sprites/footballchar2/walk_cycle/0024.png" id="109_7nmnp"]
 [ext_resource type="Texture2D" uid="uid://st7mkh0w4k2b" path="res://Sprites/footballchar2/walk_cycle/0025.png" id="110_36ln8"]
+[ext_resource type="AudioStream" uid="uid://bnkmr2q5ljlhb" path="res://Audios/punch.mp3" id="113_8y1xv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
 radius = 18.0
@@ -803,6 +805,16 @@ shoot_strength = 700
 meele_hitbox_timer = 0.4
 ball_scene = ExtResource("2_bs8co")
 health = 100
+
+[node name="PunchSound" type="AudioStreamPlayer2D" parent="." unique_id=1811594245]
+unique_name_in_owner = true
+stream = ExtResource("113_8y1xv")
+bus = &"SFX"
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="." unique_id=1523323525]
+unique_name_in_owner = true
+stream = ExtResource("4_2quun")
+bus = &"SFX"
 
 [node name="WalkOnTheGrass" type="AudioStreamPlayer2D" parent="." unique_id=1040580189]
 unique_name_in_owner = true
